@@ -2,12 +2,8 @@
     <div class="w-100">
         
         <div class="row d-flex justify-content-around align-items-center mt-4">
-            <div class="col-3 p-4">
-                <div class="p-4">
-                    <image-logo></image-logo>
-                </div>
-            </div>
-            <div class="col-6">
+            
+            <div class="col-4">
                 <form class="form-inline" action="/buscar">
                     <div class="input-group w-100">
                         <input type="text" class="form-control" 
@@ -23,7 +19,14 @@
                     </div>  
                 </form>
             </div>
-            <div class="col-3 flex-button">
+            
+            <div class="col-4 p-4">
+                <div class="p-4">
+                    <image-logo></image-logo>
+                </div>
+            </div>
+
+            <div class="col-4 flex-button">
                 <span class="white-bold bg-second p-2 flex-button rounded" style="width:60px">
                     <span class="fa fa-phone-volume"></span>
                 </span>  
@@ -31,59 +34,110 @@
             </div>
         </div>
 
-        <div class="row bg-first nav-row">
-            <div class="col-3 white-bold p-0">
-                <div class="focus-nav-item">
-                    <span class="fa fa-bars white-bold mr-1"></span>
-                    Productos Mayorista Mates Fabi
-                </div>
-            </div>
-            <div class="row col-9">
+        <div class="row nav-row">
+            <div class="row col-12">
                 <ul class="navbar">
-                    <li> <a href="/cotizador"> Hace tu pedido</a></li>
-                    <li> <a href="/regalos-empresariales"> Regalos Empresariales</a></li>
-                    <li> <a href="/sucursales"> Sucursales</a></li>
-                    <li> <a href="/contacto"> Contacto</a></li>
-                    <li> <a href="/franquicia"> Franquicia</a></li>
+                    <li :class="{'hovered':supercategory==1 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercategory(1)"> ARTICULOS DE LIMPIEZA <i class="fa fa-chevron-down"></i>  </li>
+                    <li :class="{'hovered':supercategory==2 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercategory(2)"> ARTICULOS DE BAZAR <i class="fa fa-chevron-down"></i>  </li>
+                    <li> <a href="/cotizador"> HACE TU PEDIDO</a></li>
+                     <li> <a href="/sucursales"> SUCURSALES</a></li>
+                    <li> <a href="/contacto"> CONTACTO</a></li>
                 </ul>
             </div>
         </div>
+          <transition enter-active-class="animated fadeIn fastest"
+                            leave-active-class="animated fadeOut fastest">
+                    <div v-if="overMenu || overNav" 
+                        @mouseover="overMenu=true"
+                        @mouseleave="overMenu=false" 
+                        class="nav-row row bg-first d-flex justify-content-center" >
+                        <a v-for="category in menucats" :key="category.id"
+                            :href="category.slug" 
+                             class="subcat col-2 align-items-center d-flex justify-content-center">
+
+                            {{category.name | uc}}
+                        
+                        </a>
+                    </div> 
+            </transition>
     </div>
 </template>
 
 <script>
 import imageLogo from '../images/image-logo.vue';
-import overlayMenu from './overlay-menu.vue'
+
 import {mapGetters} from 'vuex';
 export default {
     components : {
         imageLogo,
-        overlayMenu
+     
     },
     data(){
         return{
-            showMenu : false
+            supercategory :1,
+            overMenu : false,
+            overNav : false,
      }
     },
     computed :{
         ...mapGetters({
             categories : 'categories/getCategories'
         }),
+        menucats(){
+            return this.categories.filter(cat => {
+                return cat.supercategory_id == this.supercategory
+            });
+        }
+    },
+    methods:{
+        setsupercategory(id){
+            this.supercategory = id;
+            this.overNav = true;
+        },
+        mouseleaved(){
+            setTimeout(()=>{
+               if (!this.showMenu){
+                   this.supercategory = null;
+               }
+            },1000);
+        }
     }
 }
 </script>
 
-<style scoped lang="scss">
- $color-first : #b2037a;
+<style lang="scss">
+ $color-first : #1102FF;
 
 // El verde es 09cca2 
-$color-second : #09cca2;
+$color-second : #24FFB8;
 
 // Rosa fuerte es ff0aaf
-$color-focus: #ff0aaf; 
+$color-focus: #1EAAFF; 
 
 // Rosa claro es ff97dd
-$color-back: #ff97dd;
+$color-back: #0FE0E8;
+
+$color-other: #104DE8;
+
+.fa-chevron-down{
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.subcat
+{
+    text-align: center;
+    padding: 10px;
+    border:1px solid #fff;
+    cursor: pointer;
+     color: #fff;
+     font-weight: bold;
+    &:hover{
+       background-color: #eee;
+        color: $color-first;
+        border-bottom: 3px solid $color-second;
+    }
+}
 
 .focus-nav-item
 {
@@ -101,8 +155,8 @@ $color-back: #ff97dd;
        }
   
 .navbar{
-    font-weight: bold;
-    color:#fff;
+    /* font-weight: bold; */
+    color:#000;
     display:flex;
     width: 100%;
     justify-content: space-around;
@@ -131,13 +185,18 @@ $color-back: #ff97dd;
         align-items:center;
         justify-content: center;
         &:hover{
-             background-color: #eee;
-             color: darken($color-second,10%);
-            border-bottom: 3px solid $color-second;
+             background-color: $color-first;
+             color: #fff;
+             border-bottom: 3px solid $color-second;
             }
         
     }
 
+    .hovered{
+           background-color: $color-first;
+            color: #fff;
+            border-bottom: 3px solid $color-second;
+    }
  
      
    

@@ -1,36 +1,27 @@
 <template>
-    <div class="w-100">
-        <div class="row d-flex justify-content-center">
-            <div class="w-50 mt-3 p-3 ">
-                <image-logo></image-logo>
-            </div>
+    <div class="w-100" id="top">
+        <div style="height:50px">
+
         </div>
-         <transition enter-active-class="animated slideInLeft faster"
-                        leave-active-class="animated slideOutLeft faster">
-            <overlay-menu v-if="showMenu" :categories='categories' 
-                        @close="showMenu=false"></overlay-menu>
-        </transition>
-             <nav class="navbar navbar-expand-lg navbar-dark bg-first row">
-             <button aria-label="menu" class="navbar-toggler col-1 offset-1 bg-second d-flex justify-content-center align-items-center
-                            text-white font-weight-bold" 
-                     @click="showMenu = true" >
+        <div class="fixthis row d-flex justify-content-between pt-2 pb-1">
+             <button aria-label="menu" 
+             class="col-2 navbar-toggler
+                    font-weight-bold" 
+                     @click="shomenu" >
                 <span class="fa fa-bars"></span>
             </button>
-            <form class="form-inline col-10" action="/buscar">
-                <div class="input-group">
-                    <input type="text" class="form-control" 
-                            aria-label="Buscar productos"
-                            name="search"
-                            placeholder="Que estas buscando?">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text bg-second d-flex justify-content-center" id="search-addon">
-                            <span class="fa fa-search text-white font-weight-bold">
-                            </span>
-                        </span>
-                    </div>
-                </div>  
-            </form>
-        </nav>
+            <div class="col-8 ">
+                <image-logo></image-logo>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+         
+        <mobile-menu v-if="showMenu" :categories='categories' 
+                        @close="showMenu=false"></mobile-menu>
+
+  
 
     
 
@@ -43,12 +34,12 @@
 
 <script>
 import imageLogo from '../images/image-logo.vue';
-import overlayMenu from './overlay-menu.vue'
+import mobileMenu from './mobile-menu.vue'
 import {mapGetters} from 'vuex';
 export default {
     components : {
         imageLogo,
-        overlayMenu
+        mobileMenu
     },
     data(){
         return{
@@ -59,12 +50,24 @@ export default {
         ...mapGetters({
             categories : 'categories/getCategories'
         }),
+    },
+    methods:{
+        shomenu(){
+            this.showMenu=true;
+            window.scrollTo(0, 0);
+        }
     }
 }
 </script>
 
 <style>
   
-
+    .fixthis{
+        position: fixed;
+        z-index: 200;
+        top:0;
+        left:0;
+        background-color: #f5f8fa;
+    }
 
 </style>

@@ -7,9 +7,16 @@ export const store = new Vuex.Store({
     state : {
         user : null,
         config : null,
-        states:[]
+        states:[],
+        supercategories:[
+            {id:1, name:'limpieza'},
+            {id:2,name:'bazar'}
+        ]
     },
     getters :{
+        getSupercategories(store){
+            return store.supercategories;
+        },
         getUser(store){
             return store.user;
         },
