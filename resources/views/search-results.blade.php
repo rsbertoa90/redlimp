@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('contentA')
+@section('content')
 
     @if ($products)
         <app-search-results :ids="{{json_encode($products)}}" searchString="{{$search}}"></app-search-results>

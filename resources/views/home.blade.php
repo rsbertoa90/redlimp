@@ -6,10 +6,6 @@
     {{ Breadcrumbs::render('home') }}
 @endsection
 
-@section('contentA')
-    <app-home-a></app-home-a>
-@endsection
-
-@section('contentB')
-    <app-home-b></app-home-b>
+@section('content')
+   
 @endsection

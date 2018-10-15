@@ -186,11 +186,11 @@ export default {
     },
     data(){
         return{
-            display : 'list',
+            display : 'grid',
             sortby : 'name',
             order : 'desc',
             showOptions :[3,6,9,12],
-            show:3,
+            show:12,
             page:1,
         }
     },

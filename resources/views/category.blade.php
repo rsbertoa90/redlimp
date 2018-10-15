@@ -6,6 +6,6 @@
     {{ Breadcrumbs::render('category',$category) }}
 @endsection
 
-@section('contentA')
+@section('content')
     <app-category category_id="{{$category->id}}"></app-category>
 @endsection

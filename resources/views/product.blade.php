@@ -6,7 +6,7 @@
 @endsection
 
 
-@section('contentA')
+@section('content')
 
     <app-product :product_id="{{$product->id}}"></app-product>
 

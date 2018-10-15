@@ -4,7 +4,7 @@
     {{ Breadcrumbs::render('cotizador') }}
 @endsection
 
-@section('contentA')
+@section('content')
     @if (App\Config::find(1)->hide_prices)
         <div class="d-flex flex-column text-center w-100">
             <h1>Estamos Actualizando nuestros precios</h1>

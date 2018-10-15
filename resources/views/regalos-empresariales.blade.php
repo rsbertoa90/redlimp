@@ -6,7 +6,7 @@
     {{ Breadcrumbs::render('regalos-empresariales') }}
 @endsection
 
-@section('contentA')
+@section('content')
     
         <app-regalos></app-regalos>
      

@@ -5,6 +5,6 @@
     {{ Breadcrumbs::render('franquicia') }}
 @endsection
 
-@section('contentA')
+@section('content')
     <app-franquicia></app-franquicia>
 @endsection

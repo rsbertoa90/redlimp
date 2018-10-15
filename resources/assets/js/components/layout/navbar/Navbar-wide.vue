@@ -40,7 +40,7 @@
                     <li :class="{'hovered':supercategory==1 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercategory(1)"> ARTICULOS DE LIMPIEZA <i class="fa fa-chevron-down"></i>  </li>
                     <li :class="{'hovered':supercategory==2 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercategory(2)"> ARTICULOS DE BAZAR <i class="fa fa-chevron-down"></i>  </li>
                     <li> <a href="/cotizador"> HACE TU PEDIDO</a></li>
-                     <li> <a href="/sucursales"> SUCURSALES</a></li>
+                     <li> <a href="/sucursales"> UBICACION</a></li>
                     <li> <a href="/contacto"> CONTACTO</a></li>
                 </ul>
             </div>
@@ -128,7 +128,8 @@ $color-other: #104DE8;
 {
     text-align: center;
     padding: 10px;
-    border:1px solid #fff;
+    margin-bottom: 5px;
+   //border:1px solid #fff;
     cursor: pointer;
      color: #fff;
      font-weight: bold;

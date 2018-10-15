@@ -27,13 +27,17 @@
                         </li>
                         <li v-if="supercategories" 
                             v-for="sup in supercategories" 
-                            :key="sup.id">
+                            :key="sup.id"
+                            @click="openSubmenu(sup)">
                             <div class="w-100 d-flex justify-content-between">
                                 {{sup.name | uc}}
-                                 <i class="fa fa-chevron-right"></i>
+                                 <i :class="{'fa fa-chevron-right':!sup.submenu,
+                                            'fa fa-chevron-down':sup.submenu}"></i>
                             </div>
-                            <div v-if="showCats">
-
+                            <div v-if="sup.submenu" class="row mt-2">
+                                <div class="col-6 submenucat" v-for="cat in submenuCats" :key="cat.id">
+                                    <a :href="cat.slug">{{cat.name | uc}}</a>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -55,13 +59,14 @@ export default {
     },
     data(){
         return{
+            submenuCats:[],
             supercategory:null,
             showCats:false,
             showMenu : false,
             routes : [
             {url : '/',name : 'home'},
             {url : '/cotizador',name : 'Hace tu pedido'},
-            {url : '/sucursales',name : 'Sucursales'},
+            {url : '/sucursales',name : 'Ubicacion'},
             {url : '/contacto',name : 'Contacto'},
         ]
                 
@@ -78,8 +83,22 @@ export default {
     methods:{
         close(){
             this.$emit('close');
-        }
-    }
+        },
+        openSubmenu(supercat){
+            console.log('opensubmenu');
+            if (!supercat.submenu){
+                vue.set(supercat,'submenu',true);
+                this.submenuCats = this.categories.filter(cat => {
+                    return cat.supercategory_id == supercat.id;
+                });
+            }
+            else{
+                supercat.submenu=false;
+            }    
+            console.log(supercat.submenu);
+        },
+    },
+    
 }
 </script>
 
@@ -98,7 +117,21 @@ export default {
 
  $color-other: #104DE8;
 
+.submenucat{
+    padding: 5px;
+    border:1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    cursor: pointer;
+    &:hover{
+          background-color: $color-first;
+             color: #fff;
+             border-bottom: 3px solid $color-second;
+    }    
 
+}
 
 
 
