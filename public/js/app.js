@@ -106531,6 +106531,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -106574,9 +106582,51 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "col-12 row" },
+          { staticClass: "col-12 row  d-flex align-items-stretch" },
           _vm._l(_vm.offers, function(product) {
-            return _c("div", { key: product.id })
+            return _c("div", { key: product.id, staticClass: "p-4" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card h-100 text-center",
+                  staticStyle: { width: "18rem" }
+                },
+                [
+                  product.images[0]
+                    ? _c("v-lazy-image", {
+                        staticClass: "card-img-top",
+                        attrs: { src: product.images[0].url, alt: product.name }
+                      })
+                    : _c("v-lazy-image", {
+                        staticClass: "card-img-top",
+                        attrs: {
+                          src: "/storage/images/app/no-photo.png",
+                          alt: product.name
+                        }
+                      }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h5", { staticClass: "card-title" }, [
+                      _vm._v(" " + _vm._s(product.name) + " ")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v(" " + _vm._s(product.description) + " ")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-primary mt-3",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v(" Ver mas ")]
+                    )
+                  ])
+                ],
+                1
+              )
+            ])
           })
         )
       ])
@@ -106588,7 +106638,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 text-center" }, [
-      _c("h2", { staticClass: "mb-4" }, [_vm._v("OFERTAS DEL MES DE REDLIMP")])
+      _c("h2", { staticClass: "mb-4 text-center" }, [
+        _vm._v("OFERTAS DEL MES DE REDLIMP")
+      ])
     ])
   }
 ]
