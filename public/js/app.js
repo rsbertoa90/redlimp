@@ -90689,7 +90689,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__banner_vue__ = __webpack_require__(535);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__banner_vue__ = __webpack_require__(431);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__banner_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__banner_vue__);
 //
 //
@@ -90708,11 +90708,327 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 431 */,
-/* 432 */,
-/* 433 */,
-/* 434 */,
-/* 435 */,
+/* 431 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(432)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(434)
+/* template */
+var __vue_template__ = __webpack_require__(435)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/home/banner.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-30c59fd6", Component.options)
+  } else {
+    hotAPI.reload("data-v-30c59fd6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 432 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(433);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(6)("3afa2a42", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-30c59fd6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./banner.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-30c59fd6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./banner.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 433 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.sm-overlay {\n  position: absolute;\n  top: 60%;\n  right: 0;\n  width: 100%;\n  text-align: center;\n}\n.sm-overlay h4 {\n    padding: 10px;\n    background-color: #33333366;\n    color: #fff;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 80%;\n    margin: auto;\n    text-align: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.home-btn {\n  background-color: #888;\n  border-radius: 0;\n  padding: 10px;\n  color: #fff;\n  font-weight: bold;\n  margin-top: 30px;\n}\n.home-btn:hover {\n    background-color: #fff;\n    border: 1px solid #000;\n    color: #000;\n}\n.overlay {\n  color: #333;\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  /*  align-items: center; */\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-top: 10px;\n}\n@media (min-width: 900px) {\n.relative {\n    position: relative;\n}\n.overlay {\n    color: #333;\n    text-align: right;\n    -webkit-box-align: right;\n        -ms-flex-align: right;\n            align-items: right;\n    position: absolute;\n    top: 0;\n    right: 8%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    height: 100%;\n}\n.overlay .big {\n      font-size: 3.6rem;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 434 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 435 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("a", { staticClass: "col-12 mb-3", attrs: { href: "/cotizador" } }, [
+      _c(
+        "div",
+        [
+          _c("v-lazy-image", {
+            attrs: {
+              src: "/storage/images/app/home1.jpg",
+              alt: "pedido online"
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _vm._m(0)
+    ]),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _vm._m(3),
+    _vm._v(" "),
+    _vm._m(4)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "overlay" }, [
+      _c("h1", { staticClass: "big" }, [_vm._v("PEDIDO ONLINE")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("Envíos a todo el país")]),
+      _vm._v(" "),
+      _c("div", [
+        _c("button", { staticClass: "btn home-btn" }, [
+          _vm._v(" HACER PRESUPUESTO ")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "" } },
+      [
+        _c("div", { staticClass: "text-center " }, [
+          _c("div", [
+            _c("img", {
+              attrs: {
+                src: "/storage/images/app/contacto.jpg",
+                alt: "contacto"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sm-overlay" }, [
+            _c("h4", [_vm._v("CONTACTO")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "" } },
+      [
+        _c("div", { staticClass: "text-center " }, [
+          _c("div", [
+            _c("img", {
+              attrs: {
+                src: "/storage/images/app/limpieza.jpg",
+                alt: "limpieza"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sm-overlay" }, [
+            _c("h4", [_vm._v("PRODUCTOS DE LIMPIEZA")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "" } },
+      [
+        _c("div", { staticClass: "text-center " }, [
+          _c("div", [
+            _c("img", {
+              attrs: { src: "/storage/images/app/bazar.jpg", alt: "bazar" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sm-overlay" }, [
+            _c("h4", [_vm._v("PRODUCTOS DE BAZAR")])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "" } },
+      [
+        _c("div", { staticClass: "text-center " }, [
+          _c("div", [
+            _c("img", {
+              attrs: {
+                src: "/storage/images/app/sucursal.jpg",
+                alt: "sucursal"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "sm-overlay" }, [
+            _c("h4", [_vm._v("SUCURSAL")])
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-30c59fd6", module.exports)
+  }
+}
+
+/***/ }),
 /* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -105843,338 +106159,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 524 */,
-/* 525 */,
-/* 526 */,
-/* 527 */,
-/* 528 */,
-/* 529 */,
-/* 530 */,
-/* 531 */,
-/* 532 */,
-/* 533 */,
-/* 534 */,
-/* 535 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(536)
-}
-var normalizeComponent = __webpack_require__(3)
-/* script */
-var __vue_script__ = __webpack_require__(538)
-/* template */
-var __vue_template__ = __webpack_require__(539)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/home/banner.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-30c59fd6", Component.options)
-  } else {
-    hotAPI.reload("data-v-30c59fd6", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 536 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(537);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(6)("3afa2a42", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-30c59fd6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./banner.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-30c59fd6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./banner.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 537 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.sm-overlay {\n  position: absolute;\n  top: 60%;\n  right: 0;\n  width: 100%;\n  text-align: center;\n}\n.sm-overlay h4 {\n    padding: 10px;\n    background-color: #33333366;\n    color: #fff;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    width: 80%;\n    margin: auto;\n    text-align: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.home-btn {\n  background-color: #888;\n  border-radius: 0;\n  padding: 10px;\n  color: #fff;\n  font-weight: bold;\n  margin-top: 30px;\n}\n.home-btn:hover {\n    background-color: #fff;\n    border: 1px solid #000;\n    color: #000;\n}\n.overlay {\n  color: #333;\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  /*  align-items: center; */\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-top: 10px;\n}\n@media (min-width: 900px) {\n.relative {\n    position: relative;\n}\n.overlay {\n    color: #333;\n    text-align: right;\n    -webkit-box-align: right;\n        -ms-flex-align: right;\n            align-items: right;\n    position: absolute;\n    top: 0;\n    right: 8%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    height: 100%;\n}\n.overlay .big {\n      font-size: 3.6rem;\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 538 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 539 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _c("a", { staticClass: "col-12 mb-3", attrs: { href: "/cotizador" } }, [
-      _c(
-        "div",
-        [
-          _c("v-lazy-image", {
-            attrs: {
-              src: "/storage/images/app/home1.jpg",
-              alt: "pedido online"
-            }
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _vm._m(0)
-    ]),
-    _vm._v(" "),
-    _vm._m(1),
-    _vm._v(" "),
-    _vm._m(2),
-    _vm._v(" "),
-    _vm._m(3),
-    _vm._v(" "),
-    _vm._m(4)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "overlay" }, [
-      _c("h1", { staticClass: "big" }, [_vm._v("PEDIDO ONLINE")]),
-      _vm._v(" "),
-      _c("h4", [_vm._v("Envíos a todo el país")]),
-      _vm._v(" "),
-      _c("div", [
-        _c("button", { staticClass: "btn home-btn" }, [
-          _vm._v(" HACER PRESUPUESTO ")
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "" } },
-      [
-        _c("div", { staticClass: "text-center " }, [
-          _c("div", [
-            _c("img", {
-              attrs: {
-                src: "/storage/images/app/contacto.jpg",
-                alt: "contacto"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "sm-overlay" }, [
-            _c("h4", [_vm._v("CONTACTO")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "" } },
-      [
-        _c("div", { staticClass: "text-center " }, [
-          _c("div", [
-            _c("img", {
-              attrs: {
-                src: "/storage/images/app/limpieza.jpg",
-                alt: "limpieza"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "sm-overlay" }, [
-            _c("h4", [_vm._v("PRODUCTOS DE LIMPIEZA")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "" } },
-      [
-        _c("div", { staticClass: "text-center " }, [
-          _c("div", [
-            _c("img", {
-              attrs: { src: "/storage/images/app/bazar.jpg", alt: "bazar" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "sm-overlay" }, [
-            _c("h4", [_vm._v("PRODUCTOS DE BAZAR")])
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "" } },
-      [
-        _c("div", { staticClass: "text-center " }, [
-          _c("div", [
-            _c("img", {
-              attrs: {
-                src: "/storage/images/app/sucursal.jpg",
-                alt: "sucursal"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "sm-overlay" }, [
-            _c("h4", [_vm._v("SUCURSAL")])
-          ])
-        ])
-      ]
-    )
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-30c59fd6", module.exports)
-  }
-}
 
 /***/ })
 /******/ ]);
