@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-12 col-lg-4 row">
                 <div class="col-2 offset-1  ">
-                    <div class="mt-2 btn  btn-circle bg-second white-bold">
+                    <div class="mt-2 btn bg-second white-bold">
                         <span class="fa fa-map-marker"></span>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="col-12 col-lg-4 row">
                 <div class="col-2 offset-1  ">
-                    <div class="mt-2 btn  btn-circle bg-second white-bold">
+                    <div class="mt-2 btn bg-second white-bold">
                         <span class="fa fa-envelope"></span>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
             </div>
             <div class="col-12 col-lg-4 row">
                 <div class="col-2 offset-1  ">
-                    <div class="mt-2 btn  btn-circle bg-second white-bold">
+                    <div class="mt-2 btn bg-second white-bold">
                         <span class="fa fa-whatsapp"></span>
                     </div>
                 </div>

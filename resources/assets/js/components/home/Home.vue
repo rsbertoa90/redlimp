@@ -1,16 +1,24 @@
 <template>
     <div>
-        <div>
             <home-banner></home-banner>
-        </div>
+            <br>
+            <br>
+            <home-info></home-info>
+            <br><br>
+            <home-offers></home-offers>
+
     </div>
 </template>
 
 <script>
 import homeBanner from './banner.vue'
+import homeInfo from './info.vue'
+import homeOffers from './offers.vue'
 export default {
     components: {
-        homeBanner
+        homeBanner,
+        homeInfo,
+        homeOffers
     }
 }
 </script>

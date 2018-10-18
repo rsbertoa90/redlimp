@@ -50,7 +50,7 @@
 </head>
 <body>
     <div class="d-flex justify-content-center align-items-center" style="width:100vw">
-        <div id="app" class="container">
+        <div id="app" class="container container-fluid">
             <app-whatsapp></app-whatsapp>
             <div class="row">
                 <app-navbar class="col-12"></app-navbar>

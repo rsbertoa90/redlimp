@@ -1,5 +1,5 @@
 <template>
-   <div class="row">
+   <div class="row full">
        <a href="/cotizador" class="col-12 mb-3">
             <div>
                 <v-lazy-image src="/storage/images/app/home1.jpg" alt="pedido online" />
@@ -14,8 +14,8 @@
        </a>
        <a href="" class="col-12 col-lg-3 p-1">
            <div class="text-center ">
-               <div>
-                    <img src="/storage/images/app/contacto.jpg" alt="contacto">
+               <div class="overflow-hidden">
+                    <v-lazy-image class="img-container" src="/storage/images/app/contacto.jpg" alt="contacto" />
                </div>
                
                     <div class="sm-overlay">
@@ -25,8 +25,8 @@
        </a>
        <a href="" class="col-12 col-lg-3 p-1">
            <div class="text-center ">
-               <div>
-                    <img src="/storage/images/app/limpieza.jpg" alt="limpieza">
+               <div class="overflow-hidden">
+                    <v-lazy-image class="img-container" src="/storage/images/app/limpieza.jpg" alt="limpieza" />
                </div>
                
                     <div class="sm-overlay">
@@ -36,8 +36,8 @@
        </a>
        <a href="" class="col-12 col-lg-3 p-1">
            <div class="text-center ">
-               <div>
-                    <img src="/storage/images/app/bazar.jpg" alt="bazar">
+               <div class="overflow-hidden">
+                    <v-lazy-image class="img-container" src="/storage/images/app/bazar.jpg" alt="bazar" />
                </div>
                
                     <div class="sm-overlay">
@@ -47,8 +47,8 @@
        </a>
        <a href="" class="col-12 col-lg-3 p-1">
            <div class="text-center ">
-               <div>
-                    <img src="/storage/images/app/sucursal.jpg" alt="sucursal">
+               <div class="overflow-hidden">
+                    <v-lazy-image class="img-container" src="/storage/images/app/sucursal.jpg" alt="sucursal" />
                </div>
                
                     <div class="sm-overlay">
@@ -68,6 +68,14 @@ export default {
 
 <style lang="scss">
 
+.overflow-hidden{
+    overflow: hidden;
+}
+
+        .img-container:hover{
+            transform: scale(1.2);
+              transition: all 1s;
+        }
         .sm-overlay{
             h4{
                 padding: 10px;
@@ -114,7 +122,16 @@ export default {
             margin-top: 10px;
         }
 
+        .full{
+            margin-right: -16%;
+        }
+
     @media(min-width:900px){
+        .full{
+    margin-right: -10%;
+    margin-left: -9.5%;
+}
+
            .relative{
         position:relative;
     }
