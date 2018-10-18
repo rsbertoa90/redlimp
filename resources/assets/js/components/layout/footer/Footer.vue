@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="col-9 mt-3">
-                   <p>Email: MatesFabi@gmail.com  </p>
+                   <p>Email: redlimp@gmail.com  </p>
                 </div>
             </div>
             <div class="col-12 col-lg-4 row">
