@@ -4,11 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Product;
+use App\Supercategory;
 
 class Category extends Model
 {
     //
     protected $guarded =[];
+
+
+    public function supercategory(){
+        return $this->belongsTo(Supercategory::class);
+    }
+
 
     public function products(){
         return $this->hasMany(Product::class);

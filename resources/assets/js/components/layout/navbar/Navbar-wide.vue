@@ -13,7 +13,8 @@
                         <div class="input-group-prepend">
                             <span class="white-bold input-group-text bg-second d-flex justify-content-center" 
                                   id="basic-addon1">
-                                Buscar
+                            <i class="fa fa-search"></i>
+                                
                             </span>
                         </div>
                     </div>  
@@ -28,7 +29,7 @@
 
             <div class="col-4 flex-button">
                 <span class="white-bold bg-second p-2 flex-button rounded" style="width:60px">
-                    <span class="fa fa-phone-volume"></span>
+                    <span class="fa fa-phone"></span>
                 </span>  
                 <span class=" p-3 d-big"> 11 3008 5414</span>
             </div>
@@ -148,7 +149,7 @@ $color-other: #104DE8;
     padding: 15px 6px;
 }
 
-.fa-phone-volume{
+.fa-phone{
     font-size: 2rem;
 }
 .nav-row{

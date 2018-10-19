@@ -82,6 +82,7 @@ Route::post('/suscription','SuscriptionController@create');
 
 /* ESTAS RUTAS SIEMPRE AL FINAL */
 
+
 Route::get('/{category}','CategoryController@detail');
 
 Route::get('/{category}/{product}','ProductController@detail');

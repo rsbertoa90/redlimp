@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Category;
+use App\Supercategory;
 use App\Product;
 use App\Metadata;
 use App\ProductImage;
@@ -25,6 +26,15 @@ class CategoryController extends Controller
     public static function detail($slug)
     {   
        $category = Category::where('slug','/'.$slug)->get()->first();
+       if (!$category){
+            $supercategory = Supercategory::where('slug','/'.$slug)->get()->first();
+             $meta = new Metadata([
+               'metatitle'=>$supercategory->metatitle,
+               'metadescription'=>$supercategory->metadescription
+               ]);
+          
+           return view('supercategory',compact('supercategory','meta'));
+       }
         if ($category){
            $meta = new Metadata([
                'metatitle'=>$category->metatitle,
@@ -32,7 +42,7 @@ class CategoryController extends Controller
                ]);
           
            return view('category',compact('category','meta'));
-        }
+        } 
         return redirect('/');
     }
     /**

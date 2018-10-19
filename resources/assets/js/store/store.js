@@ -17,6 +17,13 @@ export const store = new Vuex.Store({
         getSupercategories(store){
             return store.supercategories;
         },
+        getSupercategory: (state) => (id) => {
+               if (state.supercategories.length > 0) {
+                   return state.supercategories.find(cat => {
+                       return cat.id == id;
+                   });
+               }
+           },
         getUser(store){
             return store.user;
         },

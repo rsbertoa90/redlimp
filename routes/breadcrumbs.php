@@ -45,8 +45,13 @@ Breadcrumbs::for('regalos-empresariales', function ($trail) {
 
     // Home  > [Category]
 
- Breadcrumbs::for('category', function ($trail, $category) {
+ Breadcrumbs::for('supercategory', function ($trail, $supercategory) {
     $trail->parent('home');
+    $trail->push($supercategory->name, $supercategory->slug);
+});
+
+ Breadcrumbs::for('category', function ($trail, $category) {
+    $trail->parent('supercategory',$category->supercategory);
     $trail->push($category->name, $category->slug);
 });
 
