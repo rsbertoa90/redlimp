@@ -28,12 +28,14 @@ class CategoryController extends Controller
        $category = Category::where('slug','/'.$slug)->get()->first();
        if (!$category){
             $supercategory = Supercategory::where('slug','/'.$slug)->get()->first();
-             $meta = new Metadata([
-               'metatitle'=>$supercategory->metatitle,
-               'metadescription'=>$supercategory->metadescription
-               ]);
-          
-           return view('supercategory',compact('supercategory','meta'));
+            if($supercategory){
+                $meta = new Metadata([
+                   'metatitle'=>$supercategory->metatitle,
+                   'metadescription'=>$supercategory->metadescription
+                   ]);
+              
+               return view('supercategory',compact('supercategory','meta'));
+            } 
        }
         if ($category){
            $meta = new Metadata([
