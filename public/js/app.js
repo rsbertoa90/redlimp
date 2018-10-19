@@ -90926,7 +90926,10 @@ var render = function() {
     _vm._v(" "),
     _c(
       "a",
-      { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "/limpieza" } },
+      {
+        staticClass: "col-12 col-lg-3 p-1",
+        attrs: { href: "/limpieza-por-mayor" }
+      },
       [
         _c("div", { staticClass: "text-center " }, [
           _c(
@@ -90949,23 +90952,30 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c("a", { staticClass: "col-12 col-lg-3 p-1", attrs: { href: "/bazar" } }, [
-      _c("div", { staticClass: "text-center " }, [
-        _c(
-          "div",
-          { staticClass: "overflow-hidden" },
-          [
-            _c("v-lazy-image", {
-              staticClass: "img-container",
-              attrs: { src: "/storage/images/app/bazar.jpg", alt: "bazar" }
-            })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _vm._m(3)
-      ])
-    ]),
+    _c(
+      "a",
+      {
+        staticClass: "col-12 col-lg-3 p-1",
+        attrs: { href: "/bazar-por-mayor" }
+      },
+      [
+        _c("div", { staticClass: "text-center " }, [
+          _c(
+            "div",
+            { staticClass: "overflow-hidden" },
+            [
+              _c("v-lazy-image", {
+                staticClass: "img-container",
+                attrs: { src: "/storage/images/app/bazar.jpg", alt: "bazar" }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(3)
+        ])
+      ]
+    ),
     _vm._v(" "),
     _c(
       "a",

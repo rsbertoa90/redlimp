@@ -23,7 +23,7 @@
                     </div>
             </div>
        </a>
-       <a href="/limpieza" class="col-12 col-lg-3 p-1">
+       <a href="/limpieza-por-mayor" class="col-12 col-lg-3 p-1">
            <div class="text-center ">
                <div class="overflow-hidden">
                     <v-lazy-image class="img-container" src="/storage/images/app/limpieza.jpg" alt="limpieza" />
@@ -34,7 +34,7 @@
                     </div>
                 </div>
        </a>
-       <a href="/bazar" class="col-12 col-lg-3 p-1">
+       <a href="/bazar-por-mayor" class="col-12 col-lg-3 p-1">
            <div class="text-center ">
                <div class="overflow-hidden">
                     <v-lazy-image class="img-container" src="/storage/images/app/bazar.jpg" alt="bazar" />
