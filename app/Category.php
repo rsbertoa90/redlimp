@@ -30,7 +30,7 @@ class Category extends Model
 
     public function setNameAttribute($val)
     {
-        $this->attributes['slug'] = '/'.str_slug($val);
+        $this->attributes['slug'] = '/'.str_slug($val).'-por-mayor';
         $this->attributes['name'] = ucfirst($val);
     }
 
@@ -39,7 +39,7 @@ class Category extends Model
         if (!$val)
         {
            $val = '/'.str_slug($this->name);
-           $this->attributes['slug'] = $val;
+           $this->attributes['slug'] = $val.'-por-mayor';
            $this->save();
         }
         return $val;

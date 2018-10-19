@@ -16,7 +16,7 @@ class Supercategory extends Model
 
      public function setNameAttribute($val)
     {
-        $this->attributes['slug'] = '/'.str_slug($val);
+        $this->attributes['slug'] = '/'.str_slug($val).'-por-mayor';
         $this->attributes['name'] = ucfirst($val);
     }
    public function getNameAttribute($name)
@@ -29,7 +29,7 @@ class Supercategory extends Model
         if (!$val)
         {
            $val = '/'.str_slug($this->name);
-           $this->attributes['slug'] = $val;
+           $this->attributes['slug'] = $val.'-por-mayor';
            $this->save();
         }
         return $val;
