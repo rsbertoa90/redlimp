@@ -1,6 +1,6 @@
 
 <template>
-<div class="row" v-if="categories && categories.length > 0" >
+<div class="row" v-if="cats && cats.length > 0" >
      
         <a v-for="category in cats" :key="category.id" :href="category.slug" class="col-12 col-lg-3 p-1">
             <div class="text-center ">
@@ -36,7 +36,7 @@
             if (this.supercat_id){
                 let  categs = this.$store.getters['categories/getCategories'] ;
                 return categs.filter( cat => {
-                   return  cat.supercategory_id = this.supercategory_id;
+                   return  cat.supercategory_id == this.supercat_id;
                 });
             }
         },

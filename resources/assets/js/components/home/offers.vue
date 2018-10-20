@@ -13,7 +13,7 @@
         <div class="card-body">
           <h5 class="card-title"> {{product.name}} </h5>
           <p class="card-text"> {{product.description}} </p>
-          <a href="#" class="btn btn-primary mt-3"> Ver mas </a>
+          <a :href="product.slug" class="btn btn-primary mt-3"> Ver mas </a>
         </div>
     </div>
     </div>

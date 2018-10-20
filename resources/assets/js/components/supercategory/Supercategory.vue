@@ -17,16 +17,16 @@
         </div>
     
         <div>
-            <categories :supercat_id="supercategory_id"></categories>
+            <app-categories :supercat_id="supercategory_id"></app-categories>
         </div>
      
     </div>
 </template>
 
 <script>
-import categories from './categories.vue'
+import appCategories from './categories.vue'
 export default {
-    components:{categories},
+    components:{appCategories},
     props : ['supercategory_id'],
     computed : {
         supercategory(){

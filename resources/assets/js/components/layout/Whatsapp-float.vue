@@ -1,11 +1,17 @@
 <template>
     <a class="floating" rel="noreferrer" target="_blank" href="https://wa.me/541130085414">
+        
         <span class="fa fa-whatsapp"></span>
         <span>¿Necesitas ayuda?</span>
     </a>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
+ $color-second : #0FE0E8;
+
+
+
     .floating{
         position: fixed;
         z-index:100;
@@ -18,16 +24,18 @@
         align-items: center;
         font-weight: bold;
         font-size: 1.1rem;
-        padding: 5px;
         border-radius: 10%;
-        border: 3px solid #25D366;
+        border: 3px solid $color-second;
         background-color: #fff;
+        padding-right: 10px;
     }
     .fa-whatsapp{
-        color: #25D366;
+        color: #fff;
+        background-color: $color-second;
         font-size: 2rem;
         font-weight: bold;
         margin-right: 10px;
+        padding: 10px;
         
     }
 </style>

@@ -89568,7 +89568,7 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(412)
+  __webpack_require__(556)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
@@ -89613,46 +89613,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 412 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(413);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(5)("2122c798", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1684177f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Whatsapp-float.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1684177f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Whatsapp-float.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 413 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.floating[data-v-1684177f]{\n    position: fixed;\n    z-index:100;\n    bottom:10px;\n    right:10px;\n    display:-webkit-box;\n    display:-ms-flexbox;\n    display:flex;\n    -webkit-box-pack:center;\n        -ms-flex-pack:center;\n            justify-content:center;\n    background-color:transparent;\n    justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    font-weight: bold;\n    font-size: 1.1rem;\n    padding: 5px;\n    border-radius: 10%;\n    border: 3px solid #25D366;\n    background-color: #fff;\n}\n.fa-whatsapp[data-v-1684177f]{\n    color: #25D366;\n    font-size: 2rem;\n    font-weight: bold;\n    margin-right: 10px;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 412 */,
+/* 413 */,
 /* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -91491,7 +91453,7 @@ var render = function() {
                       "a",
                       {
                         staticClass: "btn btn-primary mt-3",
-                        attrs: { href: "#" }
+                        attrs: { href: product.slug }
                       },
                       [_vm._v(" Ver mas ")]
                     )
@@ -92737,7 +92699,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    components: { categories: __WEBPACK_IMPORTED_MODULE_0__categories_vue___default.a },
+    components: { appCategories: __WEBPACK_IMPORTED_MODULE_0__categories_vue___default.a },
     props: ['supercategory_id'],
     computed: {
         supercategory: function supercategory() {
@@ -92917,7 +92879,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (this.supercat_id) {
                 var categs = this.$store.getters['categories/getCategories'];
                 return categs.filter(function (cat) {
-                    return cat.supercategory_id = _this.supercategory_id;
+                    return cat.supercategory_id == _this.supercat_id;
                 });
             }
         }
@@ -92933,7 +92895,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.categories && _vm.categories.length > 0
+  return _vm.cats && _vm.cats.length > 0
     ? _c(
         "div",
         { staticClass: "row" },
@@ -93039,7 +93001,11 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          [_c("categories", { attrs: { supercat_id: _vm.supercategory_id } })],
+          [
+            _c("app-categories", {
+              attrs: { supercat_id: _vm.supercategory_id }
+            })
+          ],
           1
         )
       ])
@@ -107129,6 +107095,58 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 544 */,
+/* 545 */,
+/* 546 */,
+/* 547 */,
+/* 548 */,
+/* 549 */,
+/* 550 */,
+/* 551 */,
+/* 552 */,
+/* 553 */,
+/* 554 */,
+/* 555 */,
+/* 556 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(557);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(5)("0030bb72", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1684177f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Whatsapp-float.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1684177f\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Whatsapp-float.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 557 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.floating[data-v-1684177f] {\n  position: fixed;\n  z-index: 100;\n  bottom: 10px;\n  right: 10px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  background-color: transparent;\n  justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-weight: bold;\n  font-size: 1.1rem;\n  border-radius: 10%;\n  border: 3px solid #0FE0E8;\n  background-color: #fff;\n  padding-right: 10px;\n}\n.fa-whatsapp[data-v-1684177f] {\n  color: #fff;\n  background-color: #0FE0E8;\n  font-size: 2rem;\n  font-weight: bold;\n  margin-right: 10px;\n  padding: 10px;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);
