@@ -2,7 +2,7 @@
 <template>
 <div class="row" v-if="categories && categories.length > 0" >
      
-        <a v-for="category in categories" :key="category.id" :href="category.slug" class="col-12 col-lg-3 p-1">
+        <a v-for="category in cats" :key="category.id" :href="category.slug" class="col-12 col-lg-3 p-1">
             <div class="text-center ">
                 <div class="overflow-hidden">
                         <v-lazy-image v-if="category.image" class="img-container" :src="category.image" :alt="category.name" />
@@ -22,7 +22,7 @@
 
 <script>
   export default {
-      props:['supercategory_id'],
+      props:['supercat_id'],
     data() {
       return {
       
@@ -32,10 +32,10 @@
     },
     computed:{
 
-        categories(){
-            if (this.supercategory_id){
-                let  cats = this.$store.getters['categories/getCategories'] ;
-                return cats.filter( cat => {
+        cats(){
+            if (this.supercat_id){
+                let  categs = this.$store.getters['categories/getCategories'] ;
+                return categs.filter( cat => {
                    return  cat.supercategory_id = this.supercategory_id;
                 });
             }

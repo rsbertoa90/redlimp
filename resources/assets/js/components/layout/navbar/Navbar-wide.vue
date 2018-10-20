@@ -38,8 +38,16 @@
         <div class="row nav-row">
             <div class="row col-12">
                 <ul class="navbar">
-                    <li :class="{'hovered':supercategory==1 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercategory(1)"> ARTICULOS DE LIMPIEZA <i class="fa fa-chevron-down"></i>  </li>
-                    <li :class="{'hovered':supercategory==2 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercategory(2)"> ARTICULOS DE BAZAR <i class="fa fa-chevron-down"></i>  </li>
+                    <li :class="{'hovered':supercat_id==1 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercat(1)"> 
+                        <a href="/limpieza-por-mayor">  
+                            ARTICULOS DE LIMPIEZA <i class="fa fa-chevron-down"></i>  
+                        </a>
+                    </li>
+                    <li :class="{'hovered':supercat_id==2 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercat(2)">
+                        <a href="/bazar-por-mayor">    
+                            ARTICULOS DE BAZAR <i class="fa fa-chevron-down"></i>  
+                        </a>
+                    </li>
                     <li> <a href="/cotizador"> HACE TU PEDIDO</a></li>
                      <li> <a href="/sucursales"> UBICACION</a></li>
                     <li> <a href="/contacto"> CONTACTO</a></li>
@@ -75,7 +83,7 @@ export default {
     },
     data(){
         return{
-            supercategory :1,
+            supercat_id :1,
             overMenu : false,
             overNav : false,
      }
@@ -86,19 +94,19 @@ export default {
         }),
         menucats(){
             return this.categories.filter(cat => {
-                return cat.supercategory_id == this.supercategory
+                return cat.supercategory_id == this.supercat_id
             });
         }
     },
     methods:{
-        setsupercategory(id){
-            this.supercategory = id;
+        setsupercat(id){
+            this.supercat_id = id;
             this.overNav = true;
         },
         mouseleaved(){
             setTimeout(()=>{
                if (!this.showMenu){
-                   this.supercategory = null;
+                   this.supercat_id = null;
                }
             },1000);
         }
@@ -106,7 +114,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss"  >
  $color-first : #1102FF;
 
 // El verde es 09cca2 

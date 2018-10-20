@@ -88902,6 +88902,14 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -88913,7 +88921,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     },
     data: function data() {
         return {
-            supercategory: 1,
+            supercat_id: 1,
             overMenu: false,
             overNav: false
         };
@@ -88926,13 +88934,13 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
             var _this = this;
 
             return this.categories.filter(function (cat) {
-                return cat.supercategory_id == _this.supercategory;
+                return cat.supercategory_id == _this.supercat_id;
             });
         }
     }),
     methods: {
-        setsupercategory: function setsupercategory(id) {
-            this.supercategory = id;
+        setsupercat: function setsupercat(id) {
+            this.supercat_id = id;
             this.overNav = true;
         },
         mouseleaved: function mouseleaved() {
@@ -88940,7 +88948,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
             setTimeout(function () {
                 if (!_this2.showMenu) {
-                    _this2.supercategory = null;
+                    _this2.supercat_id = null;
                 }
             }, 1000);
         }
@@ -88983,51 +88991,43 @@ var render = function() {
               "li",
               {
                 class: {
-                  hovered:
-                    _vm.supercategory == 1 && (_vm.overMenu || _vm.overNav)
+                  hovered: _vm.supercat_id == 1 && (_vm.overMenu || _vm.overNav)
                 },
                 on: {
                   mouseleave: function($event) {
                     _vm.overNav = false
                   },
                   mouseover: function($event) {
-                    _vm.setsupercategory(1)
+                    _vm.setsupercat(1)
                   }
                 }
               },
-              [
-                _vm._v(" ARTICULOS DE LIMPIEZA "),
-                _c("i", { staticClass: "fa fa-chevron-down" })
-              ]
+              [_vm._m(2)]
             ),
             _vm._v(" "),
             _c(
               "li",
               {
                 class: {
-                  hovered:
-                    _vm.supercategory == 2 && (_vm.overMenu || _vm.overNav)
+                  hovered: _vm.supercat_id == 2 && (_vm.overMenu || _vm.overNav)
                 },
                 on: {
                   mouseleave: function($event) {
                     _vm.overNav = false
                   },
                   mouseover: function($event) {
-                    _vm.setsupercategory(2)
+                    _vm.setsupercat(2)
                   }
                 }
               },
-              [
-                _vm._v(" ARTICULOS DE BAZAR "),
-                _c("i", { staticClass: "fa fa-chevron-down" })
-              ]
+              [_vm._m(3)]
             ),
             _vm._v(" "),
-            _vm._m(2),
+            _vm._m(4),
             _vm._v(" "),
-            _vm._m(3),
+            _vm._m(5),
             _vm._v(" "),
-            _vm._m(4)
+            _vm._m(6)
           ])
         ])
       ]),
@@ -89130,6 +89130,24 @@ var staticRenderFns = [
       ),
       _vm._v(" "),
       _c("span", { staticClass: " p-3 d-big" }, [_vm._v(" 11 3008 5414")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "/limpieza-por-mayor" } }, [
+      _vm._v("  \n                        ARTICULOS DE LIMPIEZA "),
+      _c("i", { staticClass: "fa fa-chevron-down" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "/bazar-por-mayor" } }, [
+      _vm._v("    \n                        ARTICULOS DE BAZAR "),
+      _c("i", { staticClass: "fa fa-chevron-down" })
     ])
   },
   function() {
@@ -92887,18 +92905,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['supercategory_id'],
+    props: ['supercat_id'],
     data: function data() {
         return {};
     },
 
     computed: {
-        categories: function categories() {
+        cats: function cats() {
             var _this = this;
 
-            if (this.supercategory_id) {
-                var cats = this.$store.getters['categories/getCategories'];
-                return cats.filter(function (cat) {
+            if (this.supercat_id) {
+                var categs = this.$store.getters['categories/getCategories'];
+                return categs.filter(function (cat) {
                     return cat.supercategory_id = _this.supercategory_id;
                 });
             }
@@ -92919,7 +92937,7 @@ var render = function() {
     ? _c(
         "div",
         { staticClass: "row" },
-        _vm._l(_vm.categories, function(category) {
+        _vm._l(_vm.cats, function(category) {
           return _c(
             "a",
             {
@@ -93021,11 +93039,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          [
-            _c("categories", {
-              attrs: { supercategory_id: "supercategory_id" }
-            })
-          ],
+          [_c("categories", { attrs: { supercat_id: _vm.supercategory_id } })],
           1
         )
       ])
