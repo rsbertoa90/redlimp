@@ -18,6 +18,7 @@ Route::middleware('CheckSuper')->prefix('super')->group(function(){
     Route::get('/', 'SuperController@panel');
 
     Route::post('/category/image','CategoryController@uploadImage')->middleware('OptimizeImages');
+    Route::post('/supercategory/image','SupercategoryController@uploadImage')->middleware('OptimizeImages');
 
     Route::put('/metadata','MetadataController@update');
 });
@@ -30,6 +31,7 @@ Route::middleware('CheckAdmin')->prefix('admin')->group(function(){
 
     Route::post('/category','CategoryController@create');
     Route::put('/category','CategoryController@update');
+    Route::put('/supercategory','SupercategoryController@update');
 
 
     Route::post('/product','ProductController@create');

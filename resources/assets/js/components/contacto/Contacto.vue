@@ -5,7 +5,7 @@
             <h1>Contactate con Redlimp</h1>
         </div>
         <div class="col-12 col-lg-4">
-            <img src="/storage/images/app/contacto.png" alt="contacto">
+            <img src="/storage/images/app/contacto.jpg" alt="contacto">
         </div>
         <div class="col-12 col-lg-8">
             <form ref="form" class="form" method="post" action="/contacto">

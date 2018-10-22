@@ -3,6 +3,11 @@
     <div class="row">
         <div class="col-12">
             <hr>
+            <super-supercategories></super-supercategories>
+            <hr>
+        </div>
+        <div class="col-12">
+            <hr>
             <super-categories></super-categories>
             <hr>
         </div>
@@ -17,11 +22,13 @@
 
 <script>
 import superCategories from './categories.vue';
+import superSupercategories from './supercategories.vue';
 import superMetadata from './metadata.vue'
 export default {
     components : {
         superCategories,
-        superMetadata
+        superMetadata,
+        superSupercategories
     },
     data(){
         return{

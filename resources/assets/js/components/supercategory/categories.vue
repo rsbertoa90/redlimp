@@ -1,8 +1,8 @@
 
 <template>
-<div class="row" v-if="cats && cats.length > 0" >
+<div class="row" v-if="supercategory" >
      
-        <a v-for="category in cats" :key="category.id" :href="category.slug" class="col-12 col-lg-3 p-1">
+        <a v-for="category in supercategory.categories" :key="category.id" :href="category.slug" class="col-12 col-lg-3 p-1">
             <div class="text-center ">
                 <div class="overflow-hidden">
                         <v-lazy-image v-if="category.image" class="img-container" :src="category.image" :alt="category.name" />
@@ -22,7 +22,7 @@
 
 <script>
   export default {
-      props:['supercat_id'],
+      props:['supercategory'],
     data() {
       return {
       
@@ -30,18 +30,7 @@
         
       }
     },
-    computed:{
-
-        cats(){
-            if (this.supercat_id){
-                let  categs = this.$store.getters['categories/getCategories'] ;
-                return categs.filter( cat => {
-                   return  cat.supercategory_id == this.supercat_id;
-                });
-            }
-        },
-    },
-   
+    
   }
 </script>
 

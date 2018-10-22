@@ -6,7 +6,7 @@
   <main>
       
        <div style="width:100% ; text-align : center;">
-        <img src="{{$logo}}}" alt="">
+        <img src="{{$logo}}}" alt="Redlimp">
         </div>
 
       @foreach ($categories as $category)

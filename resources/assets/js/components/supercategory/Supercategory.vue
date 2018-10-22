@@ -17,7 +17,7 @@
         </div>
     
         <div>
-            <app-categories :supercat_id="supercategory_id"></app-categories>
+            <app-categories :supercategory="supercategory"></app-categories>
         </div>
      
     </div>

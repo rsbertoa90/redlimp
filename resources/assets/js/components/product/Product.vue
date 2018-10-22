@@ -37,14 +37,11 @@
                              <span class="fa fa-truck mr-2"></span>
                              <span class="ml-2">Envio a todo el país</span>
                         </div>
-                        <div class="col-6 d-flex align-items-center">
-                            <i class="fas fa-hand-holding-usd"></i>
-                            <span class="ml-2">Somos fabricantes!</span>
-                        </div>
+                     
                         <div class="col-12 d-flex flex-column">
-                            <span><i class="fa fa-check"></i> Compra minima en local: $1500</span>
-                            <span><i class="fa fa-check"></i> Compra minima para envios: $3000</span>
-                            <span><i class="fa fa-check"></i> Los despachos se realizaran de 1 a 5 días hábiles a partir del informe y acreditación del pago</span>
+                            <span><i class="fa fa-arrow-right"></i> Compra minima en local: $1500</span>
+                            <span><i class="fa fa-arrow-right"></i> Compra minima para envios: $3000</span>
+                            <span><i class="fa fa-arrow-right"></i> Los despachos se realizaran de 1 a 5 días hábiles a partir del informe y acreditación del pago</span>
                         </div>
                     </div>
                 </div>
@@ -95,5 +92,7 @@ export default {
 <style scope>
     .fa,.fas{
         font-size: 1.5rem;
+        text-align: center;
+        
     }
 </style>

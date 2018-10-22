@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/categories','CategoryController@getAll');
+Route::get('/supercategories','SupercategoryController@getAll');
 
 Route::get('/metadatas','MetadataController@getAll');
 

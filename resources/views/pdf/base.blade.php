@@ -354,7 +354,7 @@
       <div class="logodiv" >   
         <span >
           @if (isset($logo))
-            <img style="width: 70px" src="{{$logo}}" alt="Mates Fabi" />
+            <img style="width: 70px" src="{{$logo}}" alt="Redlimp" />
           @endif
         </span>
         <hr> 

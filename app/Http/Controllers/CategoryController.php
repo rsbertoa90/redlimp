@@ -64,7 +64,7 @@ class CategoryController extends Controller
      */
     public function create(Request $request)
     {
-        return Category::create(['name'=>$request->name]);
+        return Category::create(['name'=>$request->name, 'supercategory_id'=>$request->supercategory_id]);
         
     }
 

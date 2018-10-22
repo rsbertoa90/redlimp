@@ -19,7 +19,7 @@
                 <hr>
                 <div class="row w-100">
                     <div class="col-12 col-lg-8">
-                        <admin-create :categories="categories" @productSaved="refresh"></admin-create>
+                        <admin-create :supercategories="supercategories" @productSaved="refresh"></admin-create>
                     </div>
                     <div class="col-4 d-flex flex-column justify-content-center align-items-center">
                         <h4>Cambiar precios masivo</h4>
@@ -116,6 +116,10 @@ import { mapActions } from 'vuex';
             adminCreate : adminCreate
         },
         computed : {
+            supercategories()
+            {
+                return this.$store.getters.getSupercategories;
+            },
             config(){
                 return this.$store.getters.getConfig;
             },

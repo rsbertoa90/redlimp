@@ -8,17 +8,14 @@ export const store = new Vuex.Store({
         user : null,
         config : null,
         states:[],
-        supercategories:[
-            {id:1, name:'limpieza'},
-            {id:2,name:'bazar'}
-        ]
+        supercategories:null,
     },
     getters :{
         getSupercategories(store){
             return store.supercategories;
         },
         getSupercategory: (state) => (id) => {
-               if (state.supercategories.length > 0) {
+               if (state.supercategories) {
                    return state.supercategories.find(cat => {
                        return cat.id == id;
                    });
@@ -56,7 +53,10 @@ export const store = new Vuex.Store({
             state.config = payload;
         },
         setStates(state,payload){
-            state.states = payload
+            state.states = payload;
+        },
+        setSupercategories(state,payload){
+            state.supercategories = payload;
         }
     },
     actions : {
@@ -85,6 +85,15 @@ export const store = new Vuex.Store({
            Vue.http.get('/api/states')
                .then(response => {
                    commit('setStates', response.data);
+               });
+       },
+       fetchSupercategories: ({
+           commit
+       }, payload) => {
+
+           Vue.http.get('/api/supercategories')
+               .then(response => {
+                   commit('setSupercategories', response.data);
                });
        },
     },

@@ -7,9 +7,21 @@
                  <input required v-model.trim="formData.code" type="text" class="col-12">
              </div>
              <div class="col-3 row">
+                 <label for="" class="col-12">Supercategoria</label>
+                 <select required  id="" v-model="supercategory" class="col-12 form-control">
+                     <option  v-for="supercategory in supercategories" 
+                             :key="supercategory.id"
+                             :value="supercategory" >
+                        {{supercategory.name}}
+                     </option>
+                     
+                 </select>
+             </div>
+             <div class="col-3 row">
                  <label for="" class="col-12">Categoria</label>
-                 <select required  id="" v-model.trim="formData.category_id" class="col-12 form-control">
-                     <option  v-for="category in categories" 
+                 <select v-if="supercategory" required  id="" 
+                        v-model.trim="formData.category_id" class="col-12 form-control">
+                     <option  v-for="category in supercategory.categories" 
                              :key="category.id"
                              :value="category.id" >
                         {{category.name}}
@@ -37,9 +49,10 @@
 
 <script>
     export default {
-        props : ['categories'],
+        props : ['supercategories'],
         data(){
             return {
+                supercategory:null,
                 newCategory :null,
                 formData: {
 
@@ -54,21 +67,25 @@
         },
         methods : {
             valid(){
-                var vm = this;
-                var duplicated = null;
-                this.categories.forEach(el => {
-                    let e = el.products.find(p => {
-                        return p.code == vm.formData.code;
-                    });
-                    if (e != null){
-                        duplicated = e;
-                    }
-                });
+                if (this.supercategory){
 
-                if (duplicated!=null){
-                    swal('error','ya existe un producto con el codigo'+vm.formData.code,'error');
-                } 
-                else {return true;}
+                
+                    var vm = this;
+                    var duplicated = null;
+                    this.supercategory.categories.forEach(el => {
+                        let e = el.products.find(p => {
+                            return p.code == vm.formData.code;
+                        });
+                        if (e != null){
+                            duplicated = e;
+                        }
+                    });
+
+                    if (duplicated!=null){
+                        swal('error','ya existe un producto con el codigo'+vm.formData.code,'error');
+                    } 
+                    else {return true;}
+                }
             },
             resetForm(){
                 this.formData =  {
@@ -86,13 +103,13 @@
                     if (this.formData.category_id == 'new')
                     {
                         
-                         var duplicated = this.categories.find(function(el){
+                         var duplicated = this.supercategory.categories.find(function(el){
                              return el.name.toLowerCase() == vm.newCategory.toLowerCase();
                          }); 
                          if (duplicated != null){
                              swal ('Error', `Ya existe la categoria ${vm.newCategory}`,'error');
                          }else {
-                             vm.$http.post('/admin/category/',{name : this.newCategory})
+                             vm.$http.post('/admin/category/',{name : this.newCategory, supercategory_id : this.supercategory.id})
                                 .then(response => {
                                     var category = response.data;
                                     vm.formData.category_id = category.id;
