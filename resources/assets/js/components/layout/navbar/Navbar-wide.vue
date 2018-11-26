@@ -34,23 +34,29 @@
                 <span class=" p-3 d-big"> 11 3008 5414</span>
             </div>
         </div>
-
         <div class="row nav-row">
             <div class="row col-12">
                 <ul class="navbar">
-                    <li :class="{'hovered':supercat_id==1 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercat(1)"> 
-                        <a href="/limpieza-por-mayor">  
-                            ARTICULOS DE LIMPIEZA <i class="fa fa-chevron-down"></i>  
-                        </a>
-                    </li>
-                    <li :class="{'hovered':supercat_id==2 && (overMenu || overNav)}" @mouseleave="overNav=false"  @mouseover="setsupercat(2)">
-                        <a href="/bazar-por-mayor">    
-                            ARTICULOS DE BAZAR <i class="fa fa-chevron-down"></i>  
-                        </a>
-                    </li>
-                    <li> <a href="/cotizador"> HACE TU PEDIDO</a></li>
+                     <li> <a href="/cotizador"> HACE TU PEDIDO</a></li>
                      <li> <a href="/sucursales"> UBICACION</a></li>
                     <li> <a href="/contacto"> CONTACTO</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row nav-row">
+            <div class="row col-12">
+                <ul class="navbar">
+                    <li v-for="supercategory in supercategories" 
+                        :key="supercategory.id"
+                        :class="{'hovered':supercat_id == supercategory.id && (overMenu || overNav)}" @mouseleave="overNav=false"  
+                        @mouseover="setsupercat(supercategory.id)"> 
+                        <a :href="supercategory.slug">  
+                            {{supercategory.name}} <i class="fa fa-chevron-down"></i>  
+                        </a>
+                    </li>
+                    
+                   
                 </ul>
             </div>
         </div>
@@ -90,7 +96,8 @@ export default {
     },
     computed :{
         ...mapGetters({
-            categories : 'categories/getCategories'
+            categories : 'categories/getCategories',
+            supercategories: 'getSupercategories'
         }),
         menucats(){
             return this.categories.filter(cat => {

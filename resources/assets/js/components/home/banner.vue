@@ -12,7 +12,7 @@
                 </div>
             </div>
        </a>
-       <a href="/contacto" class="col-12 col-lg-3 p-1">
+    <!--    <a href="/contacto" class="col-12 col-lg-3 p-1">
            <div class="text-center ">
                <div class="overflow-hidden">
                     <v-lazy-image class="img-container" src="/storage/images/app/contacto.jpg" alt="contacto" />
@@ -22,30 +22,22 @@
                         <h4>CONTACTO</h4>
                     </div>
             </div>
-       </a>
-       <a href="/limpieza-por-mayor" class="col-12 col-lg-3 p-1">
+       </a> -->
+       <a v-for="sc in supercategories"
+            :key="sc.id"
+            :href="sc.slug" class="col-12 col-lg-3 p-1">
            <div class="text-center ">
                <div class="overflow-hidden">
-                    <v-lazy-image class="img-container" src="/storage/images/app/limpieza.jpg" alt="limpieza" />
+                    <v-lazy-image class="img-container" :src="sc.image" alt="limpieza" />
                </div>
                
                     <div class="sm-overlay">
-                        <h4>PRODUCTOS DE LIMPIEZA</h4>
+                        <h4> {{sc.name}} </h4>
                     </div>
                 </div>
        </a>
-       <a href="/bazar-por-mayor" class="col-12 col-lg-3 p-1">
-           <div class="text-center ">
-               <div class="overflow-hidden">
-                    <v-lazy-image class="img-container" src="/storage/images/app/bazar.jpg" alt="bazar" />
-               </div>
-               
-                    <div class="sm-overlay">
-                        <h4>PRODUCTOS DE BAZAR</h4>
-                    </div>
-                </div>
-       </a>
-       <a href="/sucursales" class="col-12 col-lg-3 p-1">
+       
+       <!-- <a href="/sucursales" class="col-12 col-lg-3 p-1">
            <div class="text-center ">
                <div class="overflow-hidden">
                     <v-lazy-image class="img-container" src="/storage/images/app/sucursal.jpg" alt="sucursal" />
@@ -55,14 +47,18 @@
                         <h4>SUCURSAL</h4>
                     </div>
                 </div>
-       </a>
+       </a> -->
       
     </div>
 </template>
 
 <script>
 export default {
-    
+    computed:{
+        supercategories(){
+            return this.$store.getters.getSupercategories;
+        }
+    }
 }
 </script>
 
