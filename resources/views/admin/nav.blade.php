@@ -1,6 +1,6 @@
 <div class="w-100 bg-danger nav white-bold p-2 mb-4 d-flex justify-content-around">
     <div class="nav-text">
-        Administracion - Mates Fabi
+        Administracion Redlimp
     </div>
    
    
