@@ -16,7 +16,7 @@ class PdfController extends Controller
         $logo = $this->imageEmbed(public_path('/storage/images/app/logo.png'));
         $pdf = PDF::loadView('pdf.ListaDePrecios', compact('categories','today','logo'));
 
-        return $pdf->download('Precios-Mates-Fabi.pdf');
+        return $pdf->download('Precios-RedLimp.pdf');
     }
 
 

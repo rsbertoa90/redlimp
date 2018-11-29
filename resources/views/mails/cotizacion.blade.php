@@ -10,9 +10,9 @@
         </p>
         <p> Si queres descargar una copia de tu presupuesto podes hacerlo en el siguiente enlace: </p>
         <p>
-            <a href="https://matesfabi.com/pdf/{{$order->id}}"> <span> --> Descargar tu presupuesto en PDF <-- </span>  </a>
+            <a href="https://redlimp.com/pdf/{{$order->id}}"> <span> --> Descargar tu presupuesto en PDF <-- </span>  </a>
         </p>
-        <p>Gracias por elegir Mates Fabi!</p>
+        <p>Gracias por elegir RedLimp!</p>
 
         
 
