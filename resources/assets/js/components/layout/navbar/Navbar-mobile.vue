@@ -85,10 +85,11 @@ export default {
     .displayed{
     max-width: 100%;
     transition: max-width 0.5s ease-in-out;
+    transition: margin-left 0.5s ease-in-out;
 }
 .nondisplayed{
     max-width: 60%;
-    margin-left: 24%;
+    margin-left: 20%;
     transition: max-width 0.5s ease-in-out;
     transition: margin-left 0.5s ease-in-out;
 }

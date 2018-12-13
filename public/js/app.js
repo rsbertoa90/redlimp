@@ -88254,7 +88254,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.fixthis{\n        position: fixed;\n        z-index: 200;\n        top:0;\n        left:0;\n        background-color: #f5f8fa;\n}\n.displayed{\n    max-width: 100%;\n    -webkit-transition: max-width 0.5s ease-in-out;\n    transition: max-width 0.5s ease-in-out;\n}\n.nondisplayed{\n    max-width: 60%;\n    margin-left: 24%;\n    -webkit-transition: max-width 0.5s ease-in-out;\n    transition: max-width 0.5s ease-in-out;\n    -webkit-transition: margin-left 0.5s ease-in-out;\n    transition: margin-left 0.5s ease-in-out;\n}\n\n", ""]);
+exports.push([module.i, "\n.fixthis{\n        position: fixed;\n        z-index: 200;\n        top:0;\n        left:0;\n        background-color: #f5f8fa;\n}\n.displayed{\n    max-width: 100%;\n    -webkit-transition: max-width 0.5s ease-in-out;\n    transition: max-width 0.5s ease-in-out;\n    -webkit-transition: margin-left 0.5s ease-in-out;\n    transition: margin-left 0.5s ease-in-out;\n}\n.nondisplayed{\n    max-width: 60%;\n    margin-left: 20%;\n    -webkit-transition: max-width 0.5s ease-in-out;\n    transition: max-width 0.5s ease-in-out;\n    -webkit-transition: margin-left 0.5s ease-in-out;\n    transition: margin-left 0.5s ease-in-out;\n}\n\n", ""]);
 
 // exports
 
@@ -88503,7 +88503,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.submenucat[data-v-5cd97529] {\n  padding: 5px;\n  border: 1px solid #ccc;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  cursor: pointer;\n}\n.submenucat[data-v-5cd97529]:hover {\n    background-color: #1102FF;\n    color: #fff;\n    border-bottom: 3px solid #0FE0E8;\n}\n#menu[data-v-5cd97529] {\n  width: 100vw;\n  background-color: #eee;\n  position: absolute;\n  top: 50px;\n  left: 0;\n  z-index: 200;\n}\nul li[data-v-5cd97529] {\n  font-size: 1rem;\n  color: #555;\n  font-weight: bold;\n  border-bottom: 1px solid #1102FF;\n  padding: 15px;\n}\nul li a[data-v-5cd97529] {\n    display: block;\n}\nhr[data-v-5cd97529] {\n  border: 0;\n  clear: both;\n  display: block;\n  width: 96%;\n  background-color: #ccc;\n  height: 1px;\n}\n", ""]);
+exports.push([module.i, "\n.submenucat[data-v-5cd97529] {\n  padding: 5px;\n  border: 1px solid #ccc;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  cursor: pointer;\n}\n.submenucat[data-v-5cd97529]:hover {\n    background-color: #1102FF;\n    color: #fff;\n    border-bottom: 3px solid #0FE0E8;\n}\n#overlay[data-v-5cd97529] {\n  background-color: #ccc;\n  position: fixed;\n  top: -10%;\n  left: -10%;\n  width: 110vw;\n  height: 110vh;\n  z-index: 300;\n}\n#menu[data-v-5cd97529] {\n  width: 100vw;\n  background-color: #eee;\n  position: absolute;\n  top: 0px;\n  left: 0;\n  z-index: 400;\n}\nul li[data-v-5cd97529] {\n  font-size: 1rem;\n  color: #555;\n  font-weight: bold;\n  border-bottom: 1px solid #1102FF;\n  padding: 15px;\n}\nul li a[data-v-5cd97529] {\n    display: block;\n}\nhr[data-v-5cd97529] {\n  border: 0;\n  clear: both;\n  display: block;\n  width: 96%;\n  background-color: #ccc;\n  height: 1px;\n}\n", ""]);
 
 // exports
 
@@ -88519,6 +88519,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(15);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -88622,103 +88629,117 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "menu" } }, [
+  return _c("div", [
     _c("div", { attrs: { id: "overlay" } }),
     _vm._v(" "),
-    _c("div", { staticClass: "row w-100 p-0 m-0 d-flex " }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-12 p-0" }, [
-        _c(
-          "ul",
-          {
-            directives: [
-              {
-                name: "on-click-outside",
-                rawName: "v-on-click-outside",
-                value: _vm.close,
-                expression: "close"
-              }
-            ]
-          },
-          [
-            _vm._l(_vm.routes, function(route) {
-              return _c("li", { key: route.url }, [
-                _c("a", { attrs: { href: route.url } }, [
-                  _vm._v(
-                    "\n                            " +
-                      _vm._s(_vm._f("uc")(route.name)) +
-                      "\n                           \n                        "
-                  )
+    _c("div", { attrs: { id: "menu" } }, [
+      _c("div", { staticClass: "row w-100 p-0 m-0 d-flex " }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 p-0" }, [
+          _c(
+            "ul",
+            {
+              directives: [
+                {
+                  name: "on-click-outside",
+                  rawName: "v-on-click-outside",
+                  value: _vm.close,
+                  expression: "close"
+                }
+              ]
+            },
+            [
+              _vm._l(_vm.routes, function(route) {
+                return _c("li", { key: route.url }, [
+                  _c("a", { attrs: { href: route.url } }, [
+                    _vm._v(
+                      "\n                                " +
+                        _vm._s(_vm._f("uc")(route.name)) +
+                        "\n                               \n                            "
+                    )
+                  ])
                 ])
-              ])
-            }),
-            _vm._v(" "),
-            _vm._l(_vm.supercategories, function(sup) {
-              return _vm.supercategories
-                ? _c(
-                    "li",
-                    {
-                      key: sup.id,
-                      on: {
-                        click: function($event) {
-                          _vm.openSubmenu(sup)
+              }),
+              _vm._v(" "),
+              _vm._l(_vm.supercategories, function(sup) {
+                return _vm.supercategories
+                  ? _c(
+                      "li",
+                      {
+                        key: sup.id,
+                        on: {
+                          click: function($event) {
+                            _vm.openSubmenu(sup)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "w-100 d-flex justify-content-between" },
-                        [
-                          _vm._v(
-                            "\n                            " +
-                              _vm._s(_vm._f("uc")(sup.name)) +
-                              "\n                             "
-                          ),
-                          _c("i", {
-                            class: {
-                              "fa fa-chevron-right": !sup.submenu,
-                              "fa fa-chevron-down": sup.submenu
-                            }
-                          })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      sup.submenu
-                        ? _c(
-                            "div",
-                            { staticClass: "row mt-2" },
-                            _vm._l(_vm.submenuCats, function(cat) {
-                              return _c(
-                                "div",
-                                {
-                                  key: cat.id,
-                                  staticClass: "col-6 submenucat"
-                                },
-                                [
-                                  _c("a", { attrs: { href: cat.slug } }, [
-                                    _vm._v(_vm._s(_vm._f("uc")(cat.name)))
-                                  ])
-                                ]
-                              )
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "w-100 d-flex justify-content-between"
+                          },
+                          [
+                            _vm._v(
+                              "\n                                " +
+                                _vm._s(_vm._f("uc")(sup.name)) +
+                                "\n                                 "
+                            ),
+                            _c("i", {
+                              class: {
+                                "fa fa-chevron-right": !sup.submenu,
+                                "fa fa-chevron-down": sup.submenu
+                              }
                             })
-                          )
-                        : _vm._e()
-                    ]
-                  )
-                : _vm._e()
-            })
-          ],
-          2
-        )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        sup.submenu
+                          ? _c(
+                              "div",
+                              { staticClass: "row mt-2" },
+                              _vm._l(_vm.submenuCats, function(cat) {
+                                return _c(
+                                  "div",
+                                  {
+                                    key: cat.id,
+                                    staticClass: "col-6 submenucat"
+                                  },
+                                  [
+                                    _c("a", { attrs: { href: cat.slug } }, [
+                                      _vm._v(_vm._s(_vm._f("uc")(cat.name)))
+                                    ])
+                                  ]
+                                )
+                              })
+                            )
+                          : _vm._e()
+                      ]
+                    )
+                  : _vm._e()
+              })
+            ],
+            2
+          )
+        ])
       ])
     ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 d-flex" }, [
+      _c("span", { staticClass: "fa fa-bars ml-2 mt-4" })
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

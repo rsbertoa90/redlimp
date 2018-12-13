@@ -1,9 +1,15 @@
 <template>
-    <div id="menu" >
+<div>
+
+    
         <div id="overlay">
 
         </div>
+    <div id="menu" >
         <div class="row w-100 p-0 m-0 d-flex ">
+            <div class="col-12 d-flex">
+                <span class="fa fa-bars ml-2 mt-4"></span>
+            </div>
             <div class="col-12 p-4 d-flex jusfify-conten-center align-items-center">
                  <form class="form-inline w-100" action="/buscar">
                     <div class="input-group w-100">
@@ -45,6 +51,7 @@
        
         </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -134,15 +141,25 @@ export default {
 }
 
 
+#overlay{
+    background-color:#ccc;
+    position: fixed;
+    top:-10%;
+    left:-10%;
+    width: 110vw;
+    height: 110vh;
+    z-index:300;
+
+
+}
 
 #menu{
         width: 100vw;
-       
         background-color: #eee;
         position: absolute;
-        top: 50px;
+        top: 0px;
         left: 0;
-        z-index: 200;
+        z-index: 400;
     }
 
 ul li {
