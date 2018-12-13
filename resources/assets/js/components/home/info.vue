@@ -19,7 +19,7 @@
         
             <div class="col-10 offset-2 offset-lg-0 col-lg-4 icon-container">
                     <i class="icon fa fa-comment"></i>
-                    <span class="text-center">Preguntas? contactanos al <br> 15 6963 5896</span>
+                    <span class="text-center">Preguntas? contactanos al <br> XX xxxx xxxx</span>
             </div>
     
 
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
- $color-first : #1102FF;
+ $color-first : #d32381;
 
       .fa,.far,.fas{
         font-size: 40px;

@@ -33,7 +33,7 @@ $color-first : #b2037a;
 $color-second : #09cca2;
 
 // Rosa fuerte es ff0aaf
-$color-focus: #ff0aaf; 
+$color-focus: #009bc8; 
 
 // Rosa claro es ff97dd
 $color-back: #ff97dd;

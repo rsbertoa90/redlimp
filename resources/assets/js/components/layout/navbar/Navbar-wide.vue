@@ -122,7 +122,9 @@ export default {
 </script>
 
 <style lang="scss"  >
- $color-first : #1102FF;
+
+ $color-first : #d32381;
+
 
 // El verde es 09cca2 
 $color-second : #24FFB8;

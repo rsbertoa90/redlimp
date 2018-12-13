@@ -32,10 +32,10 @@
                     </div>
                 </div>
                 <div class="col-9">
-                    <ul>
-                        <li> Donizzetti 186, Lomas de Zamora, Bs As </li>
+                 
+                        <p> Donizzetti 186, Lomas de Zamora, Bs As </p>
 
-                    </ul>
+                 
                 </div>
             </div>
             <div class="col-12 col-lg-4 row">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="col-9 mt-3">
-                   <p>Email: mayoristaredlimp@gmail.com  </p>
+                   <p> mayoristaredlimp@gmail.com  </p>
                 </div>
             </div>
             <div class="col-12 col-lg-4 row">

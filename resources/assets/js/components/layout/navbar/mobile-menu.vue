@@ -111,13 +111,14 @@ export default {
 
 <style scoped lang="scss">
 
- $color-first : #1102FF;
+ 
+ $color-first : #d32381;
 
  // El verde es 09cca2 
  $color-second : #0FE0E8;
 
  // Rosa fuerte es ff0aaf
- $color-focus: #1EAAFF;
+ $color-focus: #009bc8;
 
  // Rosa claro es 24FFB8
  $color-back: #24FFB8;

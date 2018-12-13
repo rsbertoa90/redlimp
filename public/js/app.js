@@ -88503,7 +88503,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.submenucat[data-v-5cd97529] {\n  padding: 5px;\n  border: 1px solid #ccc;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  cursor: pointer;\n}\n.submenucat[data-v-5cd97529]:hover {\n    background-color: #1102FF;\n    color: #fff;\n    border-bottom: 3px solid #0FE0E8;\n}\n#overlay[data-v-5cd97529] {\n  background-color: #ccc;\n  position: fixed;\n  top: -10%;\n  left: -10%;\n  width: 110vw;\n  height: 110vh;\n  z-index: 300;\n}\n#menu[data-v-5cd97529] {\n  width: 100vw;\n  background-color: #eee;\n  position: absolute;\n  top: 0px;\n  left: 0;\n  z-index: 400;\n}\nul li[data-v-5cd97529] {\n  font-size: 1rem;\n  color: #555;\n  font-weight: bold;\n  border-bottom: 1px solid #1102FF;\n  padding: 15px;\n}\nul li a[data-v-5cd97529] {\n    display: block;\n}\nhr[data-v-5cd97529] {\n  border: 0;\n  clear: both;\n  display: block;\n  width: 96%;\n  background-color: #ccc;\n  height: 1px;\n}\n", ""]);
+exports.push([module.i, "\n.submenucat[data-v-5cd97529] {\n  padding: 5px;\n  border: 1px solid #ccc;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-align: center;\n  cursor: pointer;\n}\n.submenucat[data-v-5cd97529]:hover {\n    background-color: #d32381;\n    color: #fff;\n    border-bottom: 3px solid #0FE0E8;\n}\n#overlay[data-v-5cd97529] {\n  background-color: #ccc;\n  position: fixed;\n  top: -10%;\n  left: -10%;\n  width: 110vw;\n  height: 110vh;\n  z-index: 300;\n}\n#menu[data-v-5cd97529] {\n  width: 100vw;\n  background-color: #eee;\n  position: absolute;\n  top: 0px;\n  left: 0;\n  z-index: 400;\n}\nul li[data-v-5cd97529] {\n  font-size: 1rem;\n  color: #555;\n  font-weight: bold;\n  border-bottom: 1px solid #d32381;\n  padding: 15px;\n}\nul li a[data-v-5cd97529] {\n    display: block;\n}\nhr[data-v-5cd97529] {\n  border: 0;\n  clear: both;\n  display: block;\n  width: 96%;\n  background-color: #ccc;\n  height: 1px;\n}\n", ""]);
 
 // exports
 
@@ -88938,7 +88938,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.fa-chevron-down {\n  margin-left: 5px;\n  font-weight: normal;\n}\n.subcat {\n  text-align: center;\n  padding: 10px;\n  margin-bottom: 5px;\n  cursor: pointer;\n  color: #fff;\n  font-weight: bold;\n}\n.subcat:hover {\n    background-color: #eee;\n    color: #1102FF;\n    border-bottom: 3px solid #24FFB8;\n}\n.focus-nav-item {\n  background-color: #1EAAFF;\n  width: 80%;\n  margin-left: 10%;\n  padding: 15px 6px;\n}\n.fa-phone {\n  font-size: 2rem;\n}\n.nav-row {\n  margin: 0px -7.5%;\n}\n.navbar {\n  /* font-weight: bold; */\n  color: #000;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin: 0;\n  padding: 0;\n}\n.navbar li {\n    cursor: pointer;\n    padding: 1;\n    height: 100%;\n    width: 20%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.navbar li a {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      width: 100%;\n      height: 100%;\n}\n.navbar li a:hover {\n        color: inherit;\n        text-decoration: none;\n}\n.navbar li:hover {\n      background-color: #1102FF;\n      color: #fff;\n      border-bottom: 3px solid #24FFB8;\n}\n.navbar .hovered {\n    background-color: #1102FF;\n    color: #fff;\n    border-bottom: 3px solid #24FFB8;\n}\n", ""]);
+exports.push([module.i, "\n.fa-chevron-down {\n  margin-left: 5px;\n  font-weight: normal;\n}\n.subcat {\n  text-align: center;\n  padding: 10px;\n  margin-bottom: 5px;\n  cursor: pointer;\n  color: #fff;\n  font-weight: bold;\n}\n.subcat:hover {\n    background-color: #eee;\n    color: #d32381;\n    border-bottom: 3px solid #24FFB8;\n}\n.focus-nav-item {\n  background-color: #1EAAFF;\n  width: 80%;\n  margin-left: 10%;\n  padding: 15px 6px;\n}\n.fa-phone {\n  font-size: 2rem;\n}\n.nav-row {\n  margin: 0px -7.5%;\n}\n.navbar {\n  /* font-weight: bold; */\n  color: #000;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin: 0;\n  padding: 0;\n}\n.navbar li {\n    cursor: pointer;\n    padding: 1;\n    height: 100%;\n    width: 20%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.navbar li a {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      width: 100%;\n      height: 100%;\n}\n.navbar li a:hover {\n        color: inherit;\n        text-decoration: none;\n}\n.navbar li:hover {\n      background-color: #d32381;\n      color: #fff;\n      border-bottom: 3px solid #24FFB8;\n}\n.navbar .hovered {\n    background-color: #d32381;\n    color: #fff;\n    border-bottom: 3px solid #24FFB8;\n}\n", ""]);
 
 // exports
 
@@ -89617,9 +89617,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-9" }, [
-          _c("ul", [
-            _c("li", [_vm._v(" Donizzetti 186, Lomas de Zamora, Bs As ")])
-          ])
+          _c("p", [_vm._v(" Donizzetti 186, Lomas de Zamora, Bs As ")])
         ])
       ]),
       _vm._v(" "),
@@ -89631,7 +89629,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-9 mt-3" }, [
-          _c("p", [_vm._v("Email: mayoristaredlimp@gmail.com  ")])
+          _c("p", [_vm._v(" mayoristaredlimp@gmail.com  ")])
         ])
       ]),
       _vm._v(" "),
@@ -91423,7 +91421,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.fa[data-v-5e3964d7], .far[data-v-5e3964d7], .fas[data-v-5e3964d7] {\n  font-size: 40px;\n  margin-right: 10px;\n}\n.icon-container[data-v-5e3964d7] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 15px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.icon[data-v-5e3964d7] {\n  padding: 10px;\n  background-color: #1102FF;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color: #fff;\n}\n", ""]);
+exports.push([module.i, "\n.fa[data-v-5e3964d7], .far[data-v-5e3964d7], .fas[data-v-5e3964d7] {\n  font-size: 40px;\n  margin-right: 10px;\n}\n.icon-container[data-v-5e3964d7] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding: 15px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.icon[data-v-5e3964d7] {\n  padding: 10px;\n  background-color: #d32381;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  color: #fff;\n}\n", ""]);
 
 // exports
 
@@ -91532,7 +91530,7 @@ var staticRenderFns = [
             _c("span", { staticClass: "text-center" }, [
               _vm._v("Preguntas? contactanos al "),
               _c("br"),
-              _vm._v(" 15 6963 5896")
+              _vm._v(" XX xxxx xxxx")
             ])
           ]
         )

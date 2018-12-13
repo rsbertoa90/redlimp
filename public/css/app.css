@@ -24132,15 +24132,15 @@ a.text-dark:focus {
 }
 
 .text-first {
-  color: #1102FF;
+  color: #d32381;
 }
 
 .text-first a {
-  color: #1102FF;
+  color: #d32381;
 }
 
 .bg-first {
-  background-color: #1102FF;
+  background-color: #d32381;
 }
 
 .texto {
@@ -24177,15 +24177,15 @@ a.text-dark:focus {
 }
 
 .text-focus {
-  color: #1EAAFF;
+  color: #009bc8;
 }
 
 .text-focus a {
-  color: #1EAAFF;
+  color: #009bc8;
 }
 
 .bg-focus {
-  background-color: #1EAAFF;
+  background-color: #009bc8;
 }
 
 .text-back {
@@ -24275,14 +24275,14 @@ a.text-dark:focus {
 
 .btn-outline-focus {
   font-weight: bold;
-  border: 2px solid #1EAAFF;
+  border: 2px solid #009bc8;
   background-color: #fff;
-  color: #1EAAFF;
+  color: #009bc8;
 }
 
 .btn-outline-focus:hover {
   color: #fff;
-  background-color: #1EAAFF;
+  background-color: #009bc8;
 }
 
 .crop-text {
