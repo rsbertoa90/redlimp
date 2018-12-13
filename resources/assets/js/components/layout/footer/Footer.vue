@@ -33,9 +33,7 @@
                 </div>
                 <div class="col-9">
                     <ul>
-                        <li>Pasteur 428 - CABA</li>
-                        <li>Sarmiento 2268, CABA   </li>
-                        <li>Castelli 203, CABA </li>
+                        <li> Donizzetti 186, Lomas de Zamora, Bs As </li>
 
                     </ul>
                 </div>
@@ -57,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col-9 mt-3">
-                    <p> 11 3008 5414 </p>
+                    <p> XX XXXX XXXX </p>
                 </div>
             </div>
         </div>

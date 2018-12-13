@@ -1,6 +1,6 @@
 <template>
     <div class="w-100" id="top">
-        <div style="height:50px">
+        <div style="height:190px">
 
         </div>
         <div class="fixthis row d-flex justify-content-between pt-2 pb-1">
@@ -10,8 +10,11 @@
                      @click="shomenu" >
                 <span class="fa fa-bars"></span>
             </button>
-            <div class="col-8 ">
-                <image-logo></image-logo>
+            <div class="col-8 mb-4 ">
+                <div :class="{'displayed' : scrollOnTop,
+                    'nondisplayed': !scrollOnTop}">
+                    <image-logo></image-logo>
+                </div>
             </div>
             <div class="col-2">
 
@@ -43,7 +46,8 @@ export default {
     },
     data(){
         return{
-            showMenu : false
+            showMenu : false,
+            scrollOnTop:true
      }
     },
     computed :{
@@ -55,7 +59,15 @@ export default {
         shomenu(){
             this.showMenu=true;
             window.scrollTo(0, 0);
-        }
+        },
+        handleScroll(){
+          this.scrollOnTop =  window.scrollY < 100;
+      }
+      
+    },
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+
     }
 }
 </script>
@@ -69,5 +81,16 @@ export default {
         left:0;
         background-color: #f5f8fa;
     }
+
+    .displayed{
+    max-width: 100%;
+    transition: max-width 0.5s ease-in-out;
+}
+.nondisplayed{
+    max-width: 60%;
+    margin-left: 24%;
+    transition: max-width 0.5s ease-in-out;
+    transition: margin-left 0.5s ease-in-out;
+}
 
 </style>

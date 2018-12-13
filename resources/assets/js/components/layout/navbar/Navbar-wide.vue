@@ -31,7 +31,7 @@
                 <span class="white-bold bg-second p-2 flex-button rounded" style="width:60px">
                     <span class="fa fa-phone"></span>
                 </span>  
-                <span class=" p-3 d-big"> 11 3008 5414</span>
+                <span class=" p-3 d-big"> XX XXXX XXXX</span>
             </div>
         </div>
         <div class="row nav-row">
