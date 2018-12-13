@@ -88575,6 +88575,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
 
 
 
@@ -88591,7 +88592,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
             supercategory: null,
             showCats: false,
             showMenu: false,
-            routes: [{ url: '/', name: 'home' }, { url: '/cotizador', name: 'Hace tu pedido' }, { url: '/sucursales', name: 'Ubicacion' }, { url: '/contacto', name: 'Contacto' }]
+            routes: [{ url: '/', name: 'home', icon: 'fas fa-home' }, { url: '/cotizador', name: 'Hace tu pedido', icon: 'fa fa-shopping-cart' }, { url: '/sucursales', name: 'Ubicacion', icon: 'fas fa-map-marker-alt' }, { url: '/contacto', name: 'Contacto', icon: 'fas fa-mobile-alt' }]
 
         };
     },
@@ -88657,6 +88658,7 @@ var render = function() {
               _vm._l(_vm.routes, function(route) {
                 return _c("li", { key: route.url }, [
                   _c("a", { attrs: { href: route.url } }, [
+                    _c("span", { staticClass: "mr-1", class: route.icon }),
                     _vm._v(
                       "\n                                " +
                         _vm._s(_vm._f("uc")(route.name)) +

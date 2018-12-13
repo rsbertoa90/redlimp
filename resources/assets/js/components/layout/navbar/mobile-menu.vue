@@ -27,6 +27,7 @@
                     <ul v-on-click-outside="close"> 
                         <li v-for="route in routes" :key="route.url">
                             <a :href="route.url" >
+                                <span :class="route.icon" class="mr-1"></span>
                                 {{route.name | uc}}
                                
                             </a>
@@ -71,10 +72,10 @@ export default {
             showCats:false,
             showMenu : false,
             routes : [
-            {url : '/',name : 'home'},
-            {url : '/cotizador',name : 'Hace tu pedido'},
-            {url : '/sucursales',name : 'Ubicacion'},
-            {url : '/contacto',name : 'Contacto'},
+            {url : '/',name : 'home', icon:'fas fa-home'},
+            {url : '/cotizador',name : 'Hace tu pedido', icon:'fa fa-shopping-cart'},
+            {url : '/sucursales',name : 'Ubicacion', icon:'fas fa-map-marker-alt'},
+            {url : '/contacto',name : 'Contacto', icon:'fas fa-mobile-alt'},
         ]
                 
             
