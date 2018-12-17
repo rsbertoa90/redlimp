@@ -30,7 +30,8 @@
                </div> 
        <!--  -->        
 
-       <span v-if="!formData.shipping" class="warn">*Los retiros presenciales son en el local de Pasteur 428 (Once) </span>
+       <span v-if="!formData.shipping" class="warn">* Los retiros presenciales son na la oficina comercial ubicada en Donizzetti 186, Lomas de Zamora, Bs As </span>
+       <br>
        <span class="warn">*Los precios no incluyen IVA</span>
         <div v-if="user.role_id > 2" class="col-12 row form-group-row mb-3">
                     <span class=" warn" v-if="!formData.shipping">*El minimo de compra retirando en el local es de ${{minBuy}}</span>
@@ -134,7 +135,7 @@ export default{
         minBuy(){
            if(this.user && this.user.role_id > 2)
            {
-              return this.formData.shipping ? 4000 : 1500 ;
+              return this.formData.shipping ? 3000 : 1500 ;
            }
            return 1;
         },

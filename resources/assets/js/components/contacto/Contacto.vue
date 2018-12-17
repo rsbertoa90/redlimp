@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1>Contactate con Redlimp</h1>
+            <h1>Contactate con Mayorista Redlimp</h1>
         </div>
         <div class="col-12 col-lg-4">
             <img src="/storage/images/app/contacto.jpg" alt="contacto">
