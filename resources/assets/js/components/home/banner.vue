@@ -25,7 +25,7 @@
        </a> -->
        <a v-for="sc in supercategories"
             :key="sc.id"
-            :href="sc.slug" class="col-12 col-lg-3 p-1">
+            :href="sc.slug" class="col-12 col-lg-4 p-1">
            <div class="text-center ">
                <div class="overflow-hidden">
                     <v-lazy-image class="img-container" :src="sc.image" alt="limpieza" />
