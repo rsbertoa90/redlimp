@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col-9 mt-3">
-                    <p> XX XXXX XXXX </p>
+                    <p> 11 6234 4492 </p>
                 </div>
             </div>
         </div>
