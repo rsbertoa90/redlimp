@@ -19,7 +19,7 @@
         
             <div class="col-10 offset-2 offset-lg-0 col-lg-4 icon-container">
                     <i class="icon fa fa-comment"></i>
-                    <span class="text-center">Preguntas? contactanos al <br> XX xxxx xxxx</span>
+                    <span class="text-center">Preguntas? contactanos al <br> 11 6234 4492</span>
             </div>
     
 
