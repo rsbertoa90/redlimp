@@ -34,9 +34,8 @@
     <link rel="preconnect" href="https://maps.google.com">
     <link rel="preconnect" href="https://www.google.com">
 
-    {{-- Google search panel --}}
-    <meta name="google-site-verification" content="NYmY4PL-kI89JjTkAUhCTkR8oWiGfabLWvgngOyFnf8" />
-
+    {{-- Google search panel verif --}}
+    <meta name="google-site-verification" content="Z6q5oeYmjW3CN16Xk0RqL-K-muZozhU29MIZ6VxO_jU" />
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127092569-1"></script>
