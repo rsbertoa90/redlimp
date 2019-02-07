@@ -28,6 +28,7 @@ Vue.use(BootstrapVue);
 import VueMq from 'vue-mq'
 
 Vue.component('fade-loader', require('vue-spinner/src/FadeLoader.vue'));
+Vue.component('app-upnext', require('./components/upnext/upnext.vue'));
 Vue.component('app-cotizer', require('./components/cotizer/Cotizer.vue'));
 Vue.component('cotizer-form', require('./components/cotizer/Cotizer-form.vue'));
 // Vue.component('csrf', require('./components/csrf.vue'));
