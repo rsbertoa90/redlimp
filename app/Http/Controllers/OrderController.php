@@ -11,8 +11,9 @@ use Illuminate\Support\Facades\Auth;
 use View;
 use PDF;
 use Mail;
+use Queue;
 use App\Config;
-
+use App\Jobs\SaveNewOrder;
 class OrderController extends Controller
 {
     //
@@ -55,27 +56,14 @@ class OrderController extends Controller
             $user = User::where('email','pedidosonline@matesfabi.com')->get()->first();
         }
         $data['user_id'] = $user->id;
-        $order = Order::create($data);
-
-        $list = json_decode($request->list);
-
-        foreach($list as $item)
-        {
-            OrderItem::create([
-                'order_id'=>$order->id,
-                'product_id' => $item->id,
-                'code'=>$item->code,
-                'name'=>$item->name,
-                'price'=>$item->price,
-                'qty'=>$item->units,
-            ]);
-        }
-
-       if($order->mail){
-           MailController::mailOrderToClient($order);
-        }
+        $list = $request->list;
         
-        return Order::with('orderItems')->find($order->id);
+        Queue::push(new SaveNewOrder($data,$list));
+        
+        
+       
+        
+        
         
     }
 
@@ -92,14 +80,12 @@ class OrderController extends Controller
     public function getOrders()
     {
         
-        if (Auth::check()){
-            $user = Auth::user();
-            $orders = Order::where('user_id',$user->id)
-                        ->with('orderItems.product')
+        
+            $orders = Order::with('orderItems.product')
                         ->get();
         
            return $orders;             
                         
-        }
+        
     }
 }
