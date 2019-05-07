@@ -3,7 +3,7 @@
         
         <div class="row d-flex justify-content-around align-items-center mt-4">
             
-            <div class="col-4">
+            <div class="col-3 offset-1">
                 <form class="form-inline" action="/buscar">
                     <div class="input-group w-100">
                         <input type="text" class="form-control" 
@@ -37,9 +37,9 @@
         <div class="row nav-row">
             <div class="row col-12">
                 <ul class="navbar">
-                     <li> <a href="/cotizador"> <span class="fa fa-shopping-cart mr-2 text-focus"></span> HACE TU PEDIDO</a></li>
-                     <li> <a href="/sucursales"> <span class="fas fa-map-marker-alt mr-2 text-focus"></span> UBICACION</a></li>
-                    <li> <a href="/contacto">  <span class="fas fa-mobile-alt mr-2 text-focus"></span> CONTACTO</a></li>
+                     <li> <router-link to="/cotizador"> <span class="fa fa-shopping-cart mr-2 text-focus"></span> HACE TU PEDIDO</router-link></li>
+                     <li> <router-link to="/sucursales"> <span class="fas fa-map-marker-alt mr-2 text-focus"></span> UBICACION</router-link></li>
+                    <li> <router-link to="/contacto">  <span class="fas fa-mobile-alt mr-2 text-focus"></span> CONTACTO</router-link></li>
                 </ul>
             </div>
         </div>
@@ -51,9 +51,9 @@
                         :key="supercategory.id"
                         :class="{'hovered':supercat_id == supercategory.id && (overMenu || overNav)}" @mouseleave="overNav=false"  
                         @mouseover="setsupercat(supercategory.id)"> 
-                        <a :href="supercategory.slug">  
+                        <router-link :to="supercategory.slug">  
                             {{supercategory.name}} <i class="fa fa-chevron-down"></i>  
-                        </a>
+                        </router-link>
                     </li>
                     
                    
@@ -66,13 +66,13 @@
                         @mouseover="overMenu=true"
                         @mouseleave="overMenu=false" 
                         class="nav-row row bg-first d-flex justify-content-center" >
-                        <a v-for="category in menucats" :key="category.id"
-                            :href="category.slug" 
+                        <router-link v-for="category in menucats" :key="category.id"
+                            :to="category.slug" 
                              class="subcat col-2 align-items-center d-flex justify-content-center">
 
                             {{category.name | uc}}
                         
-                        </a>
+                        </router-link>
                     </div> 
             </transition>
     </div>
@@ -96,7 +96,7 @@ export default {
     },
     computed :{
         ...mapGetters({
-            categories : 'categories/getCategories',
+            categories : 'getCategories',
             supercategories: 'getSupercategories'
         }),
         menucats(){

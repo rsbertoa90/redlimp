@@ -94,23 +94,10 @@
             </div>
         </div>
         
-        <transition enter-active-class="animated bounceIn" leave-active-class="animated fadeOutDown">
-            <div v-if="total > 0" id="total"  class="col-12 row d-flex flex-column justify-content-center align-items-center w-100">
-                <div  class="bg-success p-1 col-6 col-lg-2">
-                    <div class="col-12 bg-white d-flex justify-content-center">
-                    TOTAL : ${{total | price}}
-                    </div>
-                </div>
-                <div  class="bg-success p-1 col-6 col-lg-2">
-                    <div class="col-12 bg-white d-flex justify-content-center">
-                        <a href="#form">Terminar pedido</a>
-                    </div>
-                </div>    
-            </div>    
-        </transition>
+        
         <hr>
         <div>
-            <cotizer-form :list="list" :total="total"></cotizer-form>
+            <cotizer-form></cotizer-form>
         </div>
         <div v-if="list.length > 0">
             <pedido :list="list"></pedido>
@@ -120,12 +107,13 @@
 </template>
 
 <script>
+import cotizerForm from './Cotizer-form.vue';
  import { mapActions } from 'vuex';
  import { mapGetters } from 'vuex';
     import carousel from './Carousel.vue';
     import pedido from './pedido.vue';
     export default {
-        components : {carousel,pedido},
+        components : {carousel,pedido,cotizerForm},
         data(){
             return {
                 selector:{
@@ -178,7 +166,7 @@
         },
         computed: {
             ...mapGetters({
-                categories : 'categories/getCategories',
+                categories : 'getCategories',
                user : 'getUser'
             }),
             

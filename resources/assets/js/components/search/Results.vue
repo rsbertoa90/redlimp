@@ -119,7 +119,7 @@ export default {
                 var vm=this;
                 let array=[];
                 this.ids.forEach(id => {
-                    let prod = this.$store.getters['categories/getProduct'](id);
+                    let prod = this.$store.getters['getProduct'](id);
                     if (prod){
                         array.push(prod);
                     }

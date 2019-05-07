@@ -27,7 +27,7 @@ class Product extends Model
          parent::boot();
 
           self::creating(function($product){
-            $product->attributes['slug'] = $product->category->slug.'/'.str_slug($product->name); 
+            $product->attributes['slug'] = '/'.str_slug($product->name); 
           });
     }
 
@@ -45,7 +45,7 @@ class Product extends Model
     {
         if (!$val)
         {
-            $val =  $this->category->slug.'/'.str_slug($this->name);
+            $val = '/'.str_slug($this->name);
             $this->attributes['slug'] = $val;
             $this->save();
         }

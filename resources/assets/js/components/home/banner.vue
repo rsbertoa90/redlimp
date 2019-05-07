@@ -1,6 +1,6 @@
 <template>
    <div class="row full">
-       <a href="/cotizador" class="col-12 mb-3">
+       <router-link to="/cotizador" class="col-12 mb-3">
             <div>
                 <v-lazy-image src="/storage/images/app/home1.jpg" alt="pedido online" />
             </div>
@@ -11,21 +11,11 @@
                     <button class="btn home-btn"> HACER PRESUPUESTO </button>
                 </div>
             </div>
-       </a>
-    <!--    <a href="/contacto" class="col-12 col-lg-3 p-1">
-           <div class="text-center ">
-               <div class="overflow-hidden">
-                    <v-lazy-image class="img-container" src="/storage/images/app/contacto.jpg" alt="contacto" />
-               </div>
-               
-                    <div class="sm-overlay">
-                        <h4>CONTACTO</h4>
-                    </div>
-            </div>
-       </a> -->
-       <a v-for="sc in supercategories"
+       </router-link>
+    
+       <router-link v-for="sc in supercategories"
             :key="sc.id"
-            :href="sc.slug" class="col-12 col-lg-4 p-1">
+            :to="sc.slug" class="col-12 col-lg-4 p-1">
            <div class="text-center ">
                <div class="overflow-hidden">
                     <v-lazy-image class="img-container" :src="sc.image" alt="limpieza" />
@@ -35,19 +25,9 @@
                         <h4> {{sc.name}} </h4>
                     </div>
                 </div>
-       </a>
+       </router-link>
        
-       <!-- <a href="/sucursales" class="col-12 col-lg-3 p-1">
-           <div class="text-center ">
-               <div class="overflow-hidden">
-                    <v-lazy-image class="img-container" src="/storage/images/app/sucursal.jpg" alt="sucursal" />
-               </div>
-               
-                    <div class="sm-overlay">
-                        <h4>SUCURSAL</h4>
-                    </div>
-                </div>
-       </a> -->
+      
       
     </div>
 </template>

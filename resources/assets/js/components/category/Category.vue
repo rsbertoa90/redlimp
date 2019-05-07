@@ -121,7 +121,7 @@ import productsGrid from './products-grid.vue';
 import productsList from './products-list.vue';
 export default {
     components : {productsGrid,productsList},
-    props : ['category_id'],
+    props : ['category'],
     created(){
         console.log( $('texto'));
         $('.texto').each(txt => {
@@ -132,9 +132,7 @@ export default {
 });
     },
     computed : {
-        category(){
-            return this.$store.getters['categories/getCategory'](this.category_id);
-        },
+        
         products(){
             
             

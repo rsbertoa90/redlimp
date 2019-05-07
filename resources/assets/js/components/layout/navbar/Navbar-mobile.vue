@@ -52,7 +52,7 @@ export default {
     },
     computed :{
         ...mapGetters({
-            categories : 'categories/getCategories'
+            categories : 'getCategories'
         }),
     },
     methods:{

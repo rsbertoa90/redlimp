@@ -21,8 +21,8 @@
                         <h5 style="height:40px" class="card-title font-weight-bold" itemprop="name">{{product.name | ucFirst}}</h5>
                         <h5 v-if="config && !config.hide_prices" class="card-subtitle">${{product.price |price}}</h5>
                       <!--   <p class="card-text"> {{product.description}} </p> -->
-                        <a :href="product.slug" class="btn btn-outline-focus mt-2" itemprop="url">Ver mas</a>
-                        <a href="/cotizador" class="btn btn-outline-success mt-2"> <span class="fa fa-shopping-cart"></span> Hacer un pedido</a>
+                        <router-link :to="getSlug(product)" class="btn btn-outline-focus mt-2" itemprop="url">Ver mas</router-link>
+                        <router-link to="/cotizador" class="btn btn-outline-success mt-2"> <span class="fa fa-shopping-cart"></span> Hacer un pedido</router-link>
                     </div>
                 </div>
         </div>   
@@ -40,7 +40,10 @@ export default {
             carouselProduct : null
         }
     },
-    methods:{
+    methods:{ 
+         getSlug(product){
+            return this.$store.getters.getProductSlug(product);
+        },
              show(product){
                 if (product.images[0]){
                     this.carouselProduct = product;

@@ -1,5 +1,7 @@
 <template>
-    <div>
+<div class="container">
+
+    <div class="row p-3">
             <home-banner></home-banner>
             <br>
             <br>
@@ -8,6 +10,7 @@
             <home-offers></home-offers>
 
     </div>
+</div>
 </template>
 
 <script>

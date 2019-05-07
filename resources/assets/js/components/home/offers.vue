@@ -1,6 +1,6 @@
 
 <template>
-<div class="row" v-if="offers.length > 0" >
+<div class="row" v-if="offers && offers.length > 0" >
   <hr>
   <div class="col-12 text-center">
     <h2 class="mb-4 text-center">OFERTAS DEL MES DE REDLIMP</h2>
@@ -13,7 +13,7 @@
         <div class="card-body">
           <h5 class="card-title"> {{product.name}} </h5>
           <p class="card-text"> {{product.description}} </p>
-          <a :href="product.slug" class="btn btn-primary mt-3"> Ver mas </a>
+          <router-link :to="getSlug(product)" class="btn btn-primary mt-3"> Ver mas </router-link>
         </div>
     </div>
     </div>
@@ -33,10 +33,13 @@
     computed:{
      
         offers(){
-            return this.$store.getters['categories/getOffers'];
+            return this.$store.getters['getOffers'];
         }
     },
     methods: {
+      getSlug(product){
+        return this.$store.getters.getProductSlug(product);
+      },
       appendSlide() {
         this.swiperSlides.push(this.swiperSlides.length + 1)
       },

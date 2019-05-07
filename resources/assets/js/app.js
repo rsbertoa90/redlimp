@@ -27,31 +27,9 @@ Vue.use(BootstrapVue);
 
 import VueMq from 'vue-mq'
 
-Vue.component('fade-loader', require('vue-spinner/src/FadeLoader.vue'));
-Vue.component('app-upnext', require('./components/upnext/upnext.vue'));
-Vue.component('app-cotizer', require('./components/cotizer/Cotizer.vue'));
-Vue.component('cotizer-form', require('./components/cotizer/Cotizer-form.vue'));
-// Vue.component('csrf', require('./components/csrf.vue'));
-Vue.component('app-admin', require('./components/admin/Admin.vue'));
-Vue.component('app-navbar', require('./components/layout/Navbar.vue'));
-Vue.component('app-footer', require('./components/layout/footer/Footer.vue'));
-Vue.component('app-whatsapp', require('./components/layout/Whatsapp-float.vue'));
-Vue.component('app-admin', require('./components/admin/Admin.vue'));
-Vue.component('app-super', require('./components/super/Super.vue'));
-Vue.component('image-logo', require('./components/layout/images/image-logo.vue'));
-/* Vue.component('app-side-menu', require('./components/layout/Side-menu.vue')); */
+Vue.component('fade-loader', require('vue-spinner/src/FadeLoader.vue').default);
+Vue.component('app-upnext', require('./components/upnext/upnext.vue').default);
 
-Vue.component('app-home', require('./components/home/Home.vue'));
-Vue.component('app-sucursales', require('./components/sucursales/Sucursales.vue'));
-Vue.component('app-contacto', require('./components/contacto/Contacto.vue'));
-Vue.component('app-supercategory', require('./components/supercategory/Supercategory.vue'));
-Vue.component('app-category', require('./components/category/Category.vue'));
-Vue.component('app-product', require('./components/product/Product.vue'));
-/* Vue.component('app-regalos', require('./components/regalos/Regalos.vue'));
-Vue.component('app-franquicia', require('./components/franquicia/Franquicia.vue')); */
-Vue.component('app-search-results', require('./components/search/Results.vue'));
-Vue.component('admin-orders',require('./components/admin/Orders.vue'))
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 import swal from 'sweetalert';
 window.swal = swal;
@@ -105,6 +83,7 @@ Vue.component('fa-icon', FontAwesomeIcon) */
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+Vue.component('my-app', require('./components/App.vue').default);
 
 Vue.use(VueAwesomeSwiper, /* { default global options } */ );
 
@@ -113,13 +92,17 @@ import { VLazyImagePlugin } from "v-lazy-image";
 
 Vue.use(VLazyImagePlugin);
 
+import Routes from './routes.js';
+
+/* require('./faicons.js'); */
 
 const app = new Vue({
     el: '#app',
     store,
+    router: Routes,
     methods : {
         ...mapActions({
-            fetchCategories : 'categories/fetch',
+            fetchCategories : 'fetchCategories',
             fetchUser : 'fetchUser',
             fetchConfig : 'fetchConfig',
             fetchStates : 'fetchStates',

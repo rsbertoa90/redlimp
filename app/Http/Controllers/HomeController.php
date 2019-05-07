@@ -39,7 +39,7 @@ class HomeController extends Controller
         $meta = Metadata::getPage('home');
 
         /* Temporalmente la pagina de proximamente */
-        return view('/upnext',compact('meta'));
+       /*  return view('/upnext',compact('meta')); */
         
         return view('home',compact('meta'));
     }

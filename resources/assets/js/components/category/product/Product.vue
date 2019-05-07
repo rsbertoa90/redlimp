@@ -30,7 +30,7 @@
                         <span style="font-size: 0.7rem ; font-style:italic">* Los diseños estan sujetos a disponibilidad</span>
                     </div>
                     <div class="mt-3">
-                        <a href="/cotizador" class="btn btn-lg btn-outline-success"> <span class="fa fa-shopping-cart"></span> Hacer pedido</a>
+                        <router-link to="/cotizador" class="btn btn-lg btn-outline-success"> <span class="fa fa-shopping-cart"></span> Hacer pedido</router-link>
                     </div>
                     <div class="row mt-3">
                         <div class="col-6 d-flex align-items-center">
@@ -65,7 +65,7 @@ export default {
     },
     computed:{
         product(){
-            return this.$store.getters['categories/getProduct'](this.product_id);
+            return this.$store.getters['getProduct'](this.product_id);
         },
     },
     methods:{

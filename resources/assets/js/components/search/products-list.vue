@@ -26,8 +26,8 @@
                         </div>
                         <div class="h-25">
                             <div class="col-4 d-flex align-items-base">
-                                <a itemprop="url" :href="product.slug" class="btn btn-outline-focus">Ver mas</a>
-                                <a href="/cotizador" class="btn btn-outline-success ml-2"> <span class="fa fa-shopping-cart"></span> Hacer un pedido</a>
+                                <router-link itemprop="url" :to="getSlug(product)" class="btn btn-outline-focus">Ver mas</router-link>
+                               <span>INSERT SHOP BUTTON</span>
                             </div>
                         </div>
                 
@@ -49,6 +49,9 @@ export default {
         }
     },
     methods:{
+        getSlug(product){
+            return this.$store.getters.getProductSlug(product);
+        },
          show(product){
                 this.carouselProduct = product;
                 this.showCarousel = true;

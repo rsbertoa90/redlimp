@@ -108,10 +108,7 @@
 
 <script>
 export default{
-    props : {
-        list : {default : []},
-        total : {default : 0}
-    },
+  
 
     data(){return{
         state:null,
@@ -132,6 +129,8 @@ export default{
        
     }},
     computed : {
+        total(){return this.$store.getters.getTotal},
+        list(){return this.$store.getters.getList},
         minBuy(){
            if(this.user && this.user.role_id > 2)
            {
@@ -215,7 +214,7 @@ export default{
     top: 0;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     padding-top: 5%;
 }
 

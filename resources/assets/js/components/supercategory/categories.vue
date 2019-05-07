@@ -2,7 +2,7 @@
 <template>
 <div class="row" v-if="supercategory" >
      
-        <a v-for="category in supercategory.categories" :key="category.id" :href="category.slug" class="col-12 col-lg-3 p-1">
+        <router-link v-for="category in supercategory.categories" :key="category.id" :to="category.slug" class="col-12 col-lg-3 p-1">
             <div class="text-center ">
                 <div class="overflow-hidden">
                         <v-lazy-image v-if="category.image" class="img-container" :src="category.image" :alt="category.name" />
@@ -15,7 +15,7 @@
                             </div>
                         </div>
                 </div>
-        </a>
+        </router-link>
      
 </div>
 </template>

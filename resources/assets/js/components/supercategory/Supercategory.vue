@@ -27,11 +27,9 @@
 import appCategories from './categories.vue'
 export default {
     components:{appCategories},
-    props : ['supercategory_id'],
+    props : ['supercategory'],
     computed : {
-        supercategory(){
-            return this.$store.getters.getSupercategory(this.supercategory_id);
-        },
+        
      
        
         pagination(){

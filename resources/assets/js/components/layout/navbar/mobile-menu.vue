@@ -26,11 +26,11 @@
                 <div class="col-12 p-0">
                     <ul v-on-click-outside="close"> 
                         <li v-for="route in routes" :key="route.url">
-                            <a :href="route.url" >
+                            <router-link :to="route.url" >
                                 <span :class="route.icon" class="mr-1"></span>
                                 {{route.name | uc}}
                                
-                            </a>
+                            </router-link>
                         </li>
                         <li v-if="supercategories" 
                             v-for="sup in supercategories" 
@@ -43,7 +43,7 @@
                             </div>
                             <div v-if="sup.submenu" class="row mt-2">
                                 <div class="col-6 submenucat" v-for="cat in submenuCats" :key="cat.id">
-                                    <a :href="cat.slug">{{cat.name | uc}}</a>
+                                    <router-link :to="cat.slug">{{cat.name | uc}}</router-link>
                                 </div>
                             </div>
                         </li>
@@ -83,7 +83,7 @@ export default {
     },
     computed :{
         ...mapGetters({
-            categories : 'categories/getCategories',
+            categories : 'getCategories',
             supercategories: 'getSupercategories'
 
         }),
