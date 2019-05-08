@@ -20,6 +20,13 @@
 
                 <div class="p2 row">
                     <label class="col-12 col-lg-4">
+                        Url
+                    </label>
+                    <textarea rows="1" v-model.lazy.trim="selected.slug" @change="saveSlug(selected)" 
+                        type="text" class="col-12 col-lg-8 form-control"></textarea>
+                </div>
+                <div class="p2 row">
+                    <label class="col-12 col-lg-4">
                         Descripcion
                     </label>
                     <textarea rows="5" v-model.lazy.trim="selected.description" @change="save(selected,'description')" 
@@ -97,6 +104,24 @@ export default {
                 value : category[field]
             }
             this.$http.put('/admin/category',data);
+        },
+         saveSlug(category){
+            
+                category.slug  = category.slug.replace(/\s+/g, '-').toLowerCase().trim();
+                category.slug =category.slug.replace('%','');
+                category.slug =category.slug.replace('°','');
+               
+
+                let dups = this.categories.find(c => {
+                    return c.slug === category.slug && c.id != category.id;
+                });
+
+                if (dups){
+                    swal('Cuidado!','Ya existe una categoria con esa URL','warning');
+                }else{
+                    this.save(category,'slug');
+                }
+            
         }
     }
 

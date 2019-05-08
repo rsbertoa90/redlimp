@@ -57,7 +57,6 @@
 import relatedProducts from './related.vue';
 export default {
     components:{relatedProducts},
-    props:['product_id'],
     data(){
         return{
             selectedImage : 0
@@ -65,7 +64,29 @@ export default {
     },
     computed:{
         product(){
-            return this.$store.getters['getProduct'](this.product_id);
+            let slug = this.$route.params['product_slug'];
+            
+            slug = '/'+slug;
+            slug =slug.replace('//','/');
+            slug =slug.replace('//','/');
+            let categories = this.$store.getters.getCategories;
+            let res =null;
+            if  (categories){
+                categories.forEach(c => {
+                    c.products.forEach(p=>{
+                        let sl = '/'+p.slug;
+                        sl = sl.replace('//','/');
+                        sl = sl.replace('//','/');
+                       
+                        if (sl == slug)
+                        {
+                            res = p;
+                        }
+                        
+                    });
+                });
+                return res;
+            }
         },
     },
     methods:{

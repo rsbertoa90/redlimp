@@ -11,7 +11,7 @@
             </div>
             <div class="col-12 col-lg-6 ">
                 
-                  <span class="texto"> {{category.description}} </span>  
+                  <span class="texto" v-html="text">  </span>  
             
             </div>
         </div>
@@ -122,17 +122,13 @@ import productsList from './products-list.vue';
 export default {
     components : {productsGrid,productsList},
     props : ['category'],
-    created(){
-        console.log( $('texto'));
-        $('.texto').each(txt => {
-            console.log(txt);
-        let texto = txt.val();
-        texto = texto.replace(/\n/g, "<br />");
-        $(txt).html(texto);
-});
-    },
     computed : {
-        
+        text(){
+            if (this.category && this.category.description)
+            {
+                return this.category.description.replace(/\n/g, "<br />")
+            }
+        },
         products(){
             
             

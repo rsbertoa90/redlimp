@@ -1,10 +1,13 @@
 <template>
-    <div class="row">
+    <div class="row ">
         <div class="col-12">
             <h2>Metadata de paginas</h2>
             <hr>
         </div>
+   
         
+        <hr>
+
         <div class="col-12 col-lg-4 d-flex flex-column">
             <button v-for="meta in metadatas" 
                     :key="meta.id"
@@ -47,11 +50,12 @@ export default {
             metadatas : []
         }
     },
+    
     created(){
         this.$http.get('/api/metadatas')
             .then(response => {
                 this.metadatas = _.sortBy(response.data,'page');
-                console.log(this.metadatas);
+                
             });
     },
     methods :{

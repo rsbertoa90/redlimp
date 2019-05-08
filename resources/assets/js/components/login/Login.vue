@@ -72,7 +72,7 @@ export default {
             this.$http.post('/login',this.formData)
                 .then(res => {
                     if (res.data){
-                        this.$store.dispatch('fetchUser');
+                        window.location.replace('/admin');
                     }
                     
                 });

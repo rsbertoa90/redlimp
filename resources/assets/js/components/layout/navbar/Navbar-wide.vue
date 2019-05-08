@@ -34,6 +34,28 @@
                 <span class=" p-3 d-big"> 11 6234 4492</span>
             </div>
         </div>
+
+        <div class="row nav-row" v-if="user && user.role_id<3">
+            <div class="row col-12">
+                <ul class="navbar mb-4">
+                    <li class="nav-text">
+                        <router-link to="/admin/pedidos"><i class="fas fa-user-cog"></i>  Mis pedidos</router-link>
+                    </li>
+                    <li class="nav-text">
+                        <router-link to="/admin"><i class="fas fa-user-cog"></i>  Administrar productos</router-link>
+                    </li>
+
+                    <li class="nav-text">
+                        <router-link to="/admin/metadata"><i class="fas fa-user-cog"></i>  Metadata</router-link>
+                    </li>
+                    
+                    
+                    <li class="nav-text">
+                        <a href="/logout"><i class=" fas fa-user-cog"></i> Salir</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="row nav-row">
             <div class="row col-12">
                 <ul class="navbar">
@@ -97,7 +119,8 @@ export default {
     computed :{
         ...mapGetters({
             categories : 'getCategories',
-            supercategories: 'getSupercategories'
+            supercategories: 'getSupercategories',
+            user:'getUser'
         }),
         menucats(){
             return this.categories.filter(cat => {
@@ -137,7 +160,7 @@ $color-back: #0FE0E8;
 
 $color-other: #104DE8;
 
-.fa-chevron-down{
+.fa-chevron-down {
     margin-left: 5px;
     font-weight: normal;
 }
