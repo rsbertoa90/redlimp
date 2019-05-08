@@ -66,6 +66,7 @@ import Admin from './components/admin/Admin.vue';
 import Orders from  './components/admin/Orders.vue';
 import Metadata from  './components/super/Super.vue';
 
+import Upnext from './components/upnext/upnext.vue';
 /* import SearchStatics from './components/admin/search-statics/Search-statics.vue'; */
 
 const router = new VueRouter({
@@ -74,6 +75,7 @@ const router = new VueRouter({
     },
     mode:'history',
     routes:[
+       
         {
             path:'/login',
             name:'login',
@@ -99,7 +101,10 @@ const router = new VueRouter({
             component:Metadata,
             beforeEnter:guardAdmin
         },
-       
+        {
+            path: '/',
+            component: Upnext,
+        },
 
         {
             path:'/',

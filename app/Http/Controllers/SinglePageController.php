@@ -100,7 +100,9 @@ class SinglePageController extends Controller
     
     public function index(request $request) {
         
-    $metadata = $this->resolveMetadata( $request->path() ); 
+        
+        $metadata = $this->resolveMetadata( $request->path() ); 
+        return view('/upnext',compact('metadata')); 
    
     return View::make('myapp',compact('metadata'));
     }
