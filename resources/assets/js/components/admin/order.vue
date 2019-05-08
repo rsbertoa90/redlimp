@@ -1,19 +1,52 @@
 <template>
     <div class="border border-primary p-3 mt-3">
         <div>
+
             <div class="row">
                 <div class="col-12">
                     <span class="font-weight-bold text-primary">Fecha: {{order.created_at | datetime}} </span> <br>
                 </div>
-                <div class="col-12">
-                    <span class="font-weight-bold text-primary" v-if="order.seller">Vendedor: {{order.seller}} </span>
-                </div>
-                <div class="col-12">
-                
-                <span class="font-weight-bold text-primary mt-2"  
-                        v-if="order.message" >Mensaje adjunto: " {{order.message}} " </span>
-                </div>
+               
             </div>
+            <div class="row">
+            <div class="col-12 offset-lg-9 col-lg-3">
+                <a  :href="`/admin/pdf/${order.id}`" target="_blank"
+                    class="btn btn-block btn-outline-primary">
+                    Generar PDF
+                </a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 col-lg-4" v-if="order.status == 'pagado'">
+                <button  @click="setStatus('enviado')"
+                    class="btn btn-block btn-outline-info">
+                    <span class="fa fa-truck"></span>
+                    Marcar como enviado
+                </button>
+            </div>
+            <div class="col-12 col-lg-4" v-if="order.status != 'pagado' && order.status != 'cancelado'">
+                <button  @click="setStatus('pagado')"
+                    class="btn btn-block btn-outline-success">
+                     <span class="fa fa-dollar-sign"></span>
+                    Marcar como pagado
+                </button>
+            </div>
+            <div class="col-12 col-lg-4" v-if="order.status != 'cancelado'" >
+                <button 
+                        @click="setStatus('cancelado')"
+                    class="btn btn-block btn-outline-danger">
+                     <span class="fa fa-times"></span>
+                    Marcar como Cancelado
+                </button>
+            </div>
+            <div class="col-12 col-lg-4" v-if="order.status != 'pendiente' && order.status != 'enviado'">
+                <button  @click="setStatus('pendiente')"
+                    class="btn btn-block btn-outline-warning">
+                     <span class="far fa-clock"></span>
+                    Marcar como Pendiente
+                </button>
+            </div>
+        </div>
             <table class="table table-striped table-bordered mt-3">
             <thead>
                 <tr>
@@ -69,45 +102,7 @@
           </div>
 
 
-        <div class="row">
-            <div class="col-12 offset-lg-9 col-lg-3">
-                <a  :href="`/admin/pdf/${order.id}`" target="_blank"
-                    class="btn btn-block btn-outline-primary">
-                    Generar PDF
-                </a>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-12 col-lg-4" v-if="order.status == 'pagado'">
-                <button  @click="setStatus('enviado')"
-                    class="btn btn-block btn-outline-info">
-                    <span class="fa fa-truck"></span>
-                    Marcar como enviado
-                </button>
-            </div>
-            <div class="col-12 col-lg-4" v-if="order.status != 'pagado' && order.status != 'cancelado'">
-                <button  @click="setStatus('pagado')"
-                    class="btn btn-block btn-outline-success">
-                     <span class="fa fa-dollar-sign"></span>
-                    Marcar como pagado
-                </button>
-            </div>
-            <div class="col-12 col-lg-4" v-if="order.status != 'cancelado'" >
-                <button 
-                        @click="setStatus('cancelado')"
-                    class="btn btn-block btn-outline-danger">
-                     <span class="fa fa-times"></span>
-                    Marcar como Cancelado
-                </button>
-            </div>
-            <div class="col-12 col-lg-4" v-if="order.status != 'pendiente' && order.status != 'enviado'">
-                <button  @click="setStatus('pendiente')"
-                    class="btn btn-block btn-outline-warning">
-                     <span class="far fa-clock"></span>
-                    Marcar como Pendiente
-                </button>
-            </div>
-        </div>
+        
         <div class="row">
             <div class="col-12">
             <hr>

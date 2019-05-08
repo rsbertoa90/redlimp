@@ -93,7 +93,7 @@ export default {
                 fileUploadFormData.append('id', this.selected.id);
                 this.$http.post('/super/category/image', fileUploadFormData)
                         .then(response => {
-                           window.location.replace('/super');
+                           window.location.replace('/admin/metadata');
                         });
             }
         },

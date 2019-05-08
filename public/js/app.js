@@ -2466,11 +2466,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['order'],
   data: function data() {
@@ -5128,7 +5123,7 @@ __webpack_require__.r(__webpack_exports__);
         fileUploadFormData.append('image', e.target.files[0]);
         fileUploadFormData.append('id', this.selected.id);
         this.$http.post('/super/category/image', fileUploadFormData).then(function (response) {
-          window.location.replace('/super');
+          window.location.replace('/admin/metadata');
         });
       }
     },
@@ -5557,7 +5552,9 @@ __webpack_require__.r(__webpack_exports__);
         fileUploadFormData.append('image', e.target.files[0]);
         fileUploadFormData.append('id', this.selected.id);
         this.$http.post('/super/supercategory/image', fileUploadFormData).then(function (response) {
-          window.location.replace('/super');
+          setTimeout(function () {
+            window.location.replace('/admin/metadata');
+          }, 500);
         });
       }
     },
@@ -75149,7 +75146,9 @@ var render = function() {
             _c(
               "transition",
               {
-                attrs: { "enter-active-class": "animated fadeIn fast faster " }
+                attrs: {
+                  "enter-active-class": "animated slideInLeft fast faster "
+                }
               },
               [
                 _c(
@@ -76070,29 +76069,106 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("br")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-12" }, [
-          _vm.order.seller
-            ? _c("span", { staticClass: "font-weight-bold text-primary" }, [
-                _vm._v("Vendedor: " + _vm._s(_vm.order.seller) + " ")
-              ])
-            : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-12" }, [
-          _vm.order.message
-            ? _c(
-                "span",
-                { staticClass: "font-weight-bold text-primary mt-2" },
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-12 offset-lg-9 col-lg-3" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-block btn-outline-primary",
+              attrs: { href: "/admin/pdf/" + _vm.order.id, target: "_blank" }
+            },
+            [_vm._v("\n                Generar PDF\n            ")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row mt-3" }, [
+        _vm.order.status == "pagado"
+          ? _c("div", { staticClass: "col-12 col-lg-4" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-block btn-outline-info",
+                  on: {
+                    click: function($event) {
+                      return _vm.setStatus("enviado")
+                    }
+                  }
+                },
                 [
+                  _c("span", { staticClass: "fa fa-truck" }),
+                  _vm._v("\n                Marcar como enviado\n            ")
+                ]
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.order.status != "pagado" && _vm.order.status != "cancelado"
+          ? _c("div", { staticClass: "col-12 col-lg-4" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-block btn-outline-success",
+                  on: {
+                    click: function($event) {
+                      return _vm.setStatus("pagado")
+                    }
+                  }
+                },
+                [
+                  _c("span", { staticClass: "fa fa-dollar-sign" }),
+                  _vm._v("\n                Marcar como pagado\n            ")
+                ]
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.order.status != "cancelado"
+          ? _c("div", { staticClass: "col-12 col-lg-4" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-block btn-outline-danger",
+                  on: {
+                    click: function($event) {
+                      return _vm.setStatus("cancelado")
+                    }
+                  }
+                },
+                [
+                  _c("span", { staticClass: "fa fa-times" }),
                   _vm._v(
-                    'Mensaje adjunto: " ' + _vm._s(_vm.order.message) + ' " '
+                    "\n                Marcar como Cancelado\n            "
                   )
                 ]
               )
-            : _vm._e()
-        ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.order.status != "pendiente" && _vm.order.status != "enviado"
+          ? _c("div", { staticClass: "col-12 col-lg-4" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-block btn-outline-warning",
+                  on: {
+                    click: function($event) {
+                      return _vm.setStatus("pendiente")
+                    }
+                  }
+                },
+                [
+                  _c("span", { staticClass: "far fa-clock" }),
+                  _vm._v(
+                    "\n                Marcar como Pendiente\n            "
+                  )
+                ]
+              )
+            ])
+          : _vm._e()
       ]),
       _vm._v(" "),
       _c("table", { staticClass: "table table-striped table-bordered mt-3" }, [
@@ -76189,101 +76265,6 @@ var render = function() {
           ])
         ])
       : _c("div", [_vm._v("\n                - Retira en local.\n      ")]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-12 offset-lg-9 col-lg-3" }, [
-        _c(
-          "a",
-          {
-            staticClass: "btn btn-block btn-outline-primary",
-            attrs: { href: "/admin/pdf/" + _vm.order.id, target: "_blank" }
-          },
-          [_vm._v("\n                Generar PDF\n            ")]
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row mt-3" }, [
-      _vm.order.status == "pagado"
-        ? _c("div", { staticClass: "col-12 col-lg-4" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-block btn-outline-info",
-                on: {
-                  click: function($event) {
-                    return _vm.setStatus("enviado")
-                  }
-                }
-              },
-              [
-                _c("span", { staticClass: "fa fa-truck" }),
-                _vm._v("\n                Marcar como enviado\n            ")
-              ]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.order.status != "pagado" && _vm.order.status != "cancelado"
-        ? _c("div", { staticClass: "col-12 col-lg-4" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-block btn-outline-success",
-                on: {
-                  click: function($event) {
-                    return _vm.setStatus("pagado")
-                  }
-                }
-              },
-              [
-                _c("span", { staticClass: "fa fa-dollar-sign" }),
-                _vm._v("\n                Marcar como pagado\n            ")
-              ]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.order.status != "cancelado"
-        ? _c("div", { staticClass: "col-12 col-lg-4" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-block btn-outline-danger",
-                on: {
-                  click: function($event) {
-                    return _vm.setStatus("cancelado")
-                  }
-                }
-              },
-              [
-                _c("span", { staticClass: "fa fa-times" }),
-                _vm._v("\n                Marcar como Cancelado\n            ")
-              ]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.order.status != "pendiente" && _vm.order.status != "enviado"
-        ? _c("div", { staticClass: "col-12 col-lg-4" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-block btn-outline-warning",
-                on: {
-                  click: function($event) {
-                    return _vm.setStatus("pendiente")
-                  }
-                }
-              },
-              [
-                _c("span", { staticClass: "far fa-clock" }),
-                _vm._v("\n                Marcar como Pendiente\n            ")
-              ]
-            )
-          ])
-        : _vm._e()
-    ]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-12" }, [
